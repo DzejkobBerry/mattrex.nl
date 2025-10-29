@@ -22,14 +22,8 @@ export function Testimonials() {
     rating: 5,
     text: "De zonne-omvormer en het batterijsysteem hebben onze boerderijactiviteiten getransformeerd. We zijn nu energie-onafhankelijk en besparen jaarlijks duizenden euro's."
   }];
-  return <section className="relative py-20 overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=1920&h=1080&fit=crop" alt="Solar panels on roof" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50/98 to-white/95"></div>
-      </div>
-
-      <Container className="relative z-10">
+  return <section className="py-20 bg-white">
+      <Container>
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-secondary mb-4">
             Wat Onze Klanten Zeggen

@@ -3,7 +3,7 @@ import { Container } from '../components/shared/Container';
 import { Card } from '../components/shared/Card';
 import { Button } from '../components/shared/Button';
 import { Link } from 'react-router-dom';
-import { BatteryIcon, ZapIcon, SunIcon, BoxIcon, HomeIcon, BuildingIcon } from 'lucide-react';
+import { BatteryIcon, ZapIcon, SunIcon, BoxIcon, HomeIcon, BuildingIcon, CheckCircleIcon } from 'lucide-react';
 export function Products() {
   const productCategories = [{
     category: 'Thuisbatterijen',
@@ -139,46 +139,71 @@ export function Products() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {category.products.map((product, index) => <Card key={index} hover className="overflow-hidden p-0">
+              {category.products.map((product, index) => (
+                <div
+                  key={index}
+                  className="relative bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-primary"
+                >
+                  {/* Image */}
                   <div className="relative h-48 overflow-hidden">
-                    <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
-                    <div className="absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-full font-semibold text-sm">
-                      {product.capacity}
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+
+                    {/* Capacity pill */}
+                    <div className="absolute bottom-4 left-4 flex items-center space-x-2">
+                      <div className="bg-primary text-white px-3 py-1 rounded-full font-bold text-sm">
+                        {product.capacity}
+                      </div>
                     </div>
                   </div>
 
+                  {/* Content */}
                   <div className="p-6 space-y-4">
-                    <h3 className="text-xl font-semibold text-secondary">
-                      {product.name}
-                    </h3>
-
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-gray-600">
-                        Vermogen: {product.power}
-                      </span>
-                      <span className="text-gray-600">
-                        Garantie: {product.warranty}
-                      </span>
+                    <div>
+                      <h3 className="text-2xl font-bold text-secondary mb-1">
+                        {product.name}
+                      </h3>
+                      <div className="flex items-center justify-between text-sm text-gray-600">
+                        <span>Vermogen: {product.power}</span>
+                        <span>Garantie: {product.warranty}</span>
+                      </div>
                     </div>
 
-                    <div className="text-2xl font-bold text-primary">
-                      {product.price}
+                    {/* Pricing */}
+                    <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl p-4">
+                      <div className="text-3xl font-bold text-primary">
+                        {product.price}
+                      </div>
+                      <p className="text-xs text-gray-600 mt-1">Inclusief BTW</p>
                     </div>
 
-                    <ul className="space-y-2">
-                      {product.features.map((feature, idx) => <li key={idx} className="flex items-center text-sm text-gray-700">
-                          <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
-                          {feature}
-                        </li>)}
+                    {/* Features */}
+                    <ul className="space-y-3">
+                      {product.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start text-sm text-gray-700">
+                          <CheckCircleIcon
+                            size={18}
+                            className="text-primary mr-2 flex-shrink-0 mt-0.5"
+                          />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
                     </ul>
 
+                    {/* CTA Button */}
                     <Link to="/contact">
-                      <Button variant="outline" className="w-full">
-                        Vraag Offerte Aan
+                      <Button className="w-full text-lg py-4 shadow-lg hover:shadow-xl">
+                        Vraag Offerte Aan →
                       </Button>
                     </Link>
+                    <p className="text-center text-xs text-gray-500">Gratis offerte binnen 24 uur</p>
                   </div>
-                </Card>)}
+                </div>
+              ))}
             </div>
           </Container>
         </section>)}
