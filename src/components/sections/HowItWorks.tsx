@@ -36,9 +36,6 @@ export function HowItWorks() {
         </div>
 
         <div className="relative">
-          {/* Connection Line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary via-white to-primary transform -translate-y-1/2 opacity-50"></div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
             {steps.map((step, index) => <div key={index} className="text-center space-y-4">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-lg relative">
