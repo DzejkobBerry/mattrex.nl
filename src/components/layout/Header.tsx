@@ -37,7 +37,7 @@ export function Header() {
             {navItems.map(item => <Link key={item.path} to={item.path} className={`text-base font-medium transition-colors ${isActive(item.path) ? 'text-primary' : 'text-gray-700 hover:text-primary'}`}>
                 {item.name}
               </Link>)}
-            <Link to="/contact">
+            <Link to="/#special-offer">
               <button className="bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-primary-dark transition-colors">
                 Vraag Offerte Aan
               </button>
@@ -55,7 +55,7 @@ export function Header() {
             {navItems.map(item => <Link key={item.path} to={item.path} className={`block text-base font-medium transition-colors ${isActive(item.path) ? 'text-primary' : 'text-gray-700 hover:text-primary'}`} onClick={() => setMobileMenuOpen(false)}>
                 {item.name}
               </Link>)}
-            <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/#special-offer" onClick={() => setMobileMenuOpen(false)}>
               <button className="w-full bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-primary-dark transition-colors">
                 Vraag Offerte Aan
               </button>

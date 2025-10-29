@@ -41,7 +41,7 @@ export function ProductCards() {
     badgeColor: 'bg-purple-600',
     image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop'
   }];
-  return <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-primary/5">
+  return <section id="special-offer" className="py-20 bg-gradient-to-br from-gray-50 via-white to-primary/5 scroll-mt-24">
       <Container>
         <div className="text-center mb-16">
           <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full font-semibold text-sm mb-4">

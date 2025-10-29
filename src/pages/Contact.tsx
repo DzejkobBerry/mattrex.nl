@@ -2,7 +2,7 @@ import React, { useState, lazy } from 'react';
 import { Container } from '../components/shared/Container';
 import { Card } from '../components/shared/Card';
 import { Button } from '../components/shared/Button';
-import { PhoneIcon, MailIcon, MapPinIcon, ClockIcon } from 'lucide-react';
+import { PhoneIcon, MailIcon, MapPinIcon, ClockIcon, SendIcon, CheckCircleIcon, XIcon } from 'lucide-react';
 export function Contact() {
   const [formData, setFormData] = useState({
     fullName: '',
@@ -14,9 +14,10 @@ export function Contact() {
     hasSolar: '',
     message: ''
   });
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Thank you for your request! We will contact you shortly.');
+    setIsModalOpen(true);
     // In production, this would send data to a backend
   };
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -25,7 +26,9 @@ export function Contact() {
       [e.target.name]: e.target.value
     });
   };
-  return <main className="pt-20">
+  return (
+    <>
+    <main className="pt-20">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/10 to-secondary/10 py-20">
         <Container>
@@ -42,7 +45,7 @@ export function Contact() {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Information */}
@@ -51,7 +54,7 @@ export function Contact() {
                 Contact Information
               </h2>
 
-              <Card>
+              <Card className="bg-white/90 backdrop-blur-sm border border-gray-200 shadow-md">
                 <div className="flex items-start space-x-4">
                   <div className="bg-primary/10 p-3 rounded-lg">
                     <PhoneIcon size={24} className="text-primary" />
@@ -63,7 +66,7 @@ export function Contact() {
                 </div>
               </Card>
 
-              <Card>
+              <Card className="bg-white/90 backdrop-blur-sm border border-gray-200 shadow-md">
                 <div className="flex items-start space-x-4">
                   <div className="bg-primary/10 p-3 rounded-lg">
                     <MailIcon size={24} className="text-primary" />
@@ -75,7 +78,7 @@ export function Contact() {
                 </div>
               </Card>
 
-              <Card>
+              <Card className="bg-white/90 backdrop-blur-sm border border-gray-200 shadow-md">
                 <div className="flex items-start space-x-4">
                   <div className="bg-primary/10 p-3 rounded-lg">
                     <MapPinIcon size={24} className="text-primary" />
@@ -95,7 +98,7 @@ export function Contact() {
                 </div>
               </Card>
 
-              <Card>
+              <Card className="bg-white/90 backdrop-blur-sm border border-gray-200 shadow-md">
                 <div className="flex items-start space-x-4">
                   <div className="bg-primary/10 p-3 rounded-lg">
                     <ClockIcon size={24} className="text-primary" />
@@ -118,10 +121,14 @@ export function Contact() {
 
             {/* Quote Request Form */}
             <div className="lg:col-span-2">
-              <Card className="p-8">
-                <h2 className="text-3xl font-bold text-secondary mb-6">
-                  Request a Quote
-                </h2>
+              <Card className="relative p-8 rounded-2xl bg-gradient-to-br from-white via-white to-primary/5 backdrop-blur-sm border border-gray-200 shadow-xl">
+                <div className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl bg-gradient-to-r from-primary via-secondary to-primary/60" />
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="inline-flex w-10 h-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <MailIcon size={20} />
+                  </div>
+                  <h2 className="text-3xl font-bold text-secondary">Request a Quote</h2>
+                </div>
                 <p className="text-gray-600 mb-8">
                   Fill out the form below and our team will get back to you
                   within 24 hours with a customized quote.
@@ -130,42 +137,42 @@ export function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-secondary mb-2">
                         Full Name *
                       </label>
-                      <input type="text" name="fullName" required value={formData.fullName} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="John Doe" />
+                      <input type="text" name="fullName" required value={formData.fullName} onChange={handleChange} className="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white hover:border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="John Doe" />
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-secondary mb-2">
                         Email Address *
                       </label>
-                      <input type="email" name="email" required value={formData.email} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="john@example.com" />
+                      <input type="email" name="email" required value={formData.email} onChange={handleChange} className="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white hover:border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="john@example.com" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-secondary mb-2">
                         Phone Number *
                       </label>
-                      <input type="tel" name="phone" required value={formData.phone} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="+31 6 12345678" />
+                      <input type="tel" name="phone" required value={formData.phone} onChange={handleChange} className="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white hover:border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="+31 6 12345678" />
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-secondary mb-2">
                         Installation Address *
                       </label>
-                      <input type="text" name="address" required value={formData.address} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Street, City" />
+                      <input type="text" name="address" required value={formData.address} onChange={handleChange} className="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white hover:border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Street, City" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-secondary mb-2">
                         Type of Building *
                       </label>
-                      <select name="buildingType" required value={formData.buildingType} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                      <select name="buildingType" required value={formData.buildingType} onChange={handleChange} className="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
                         <option value="">Select type</option>
                         <option value="house">House</option>
                         <option value="business">Business</option>
@@ -175,10 +182,10 @@ export function Contact() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-secondary mb-2">
                         What are you interested in? *
                       </label>
-                      <select name="interest" required value={formData.interest} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                      <select name="interest" required value={formData.interest} onChange={handleChange} className="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
                         <option value="">Select option</option>
                         <option value="battery">Battery Storage</option>
                         <option value="inverter">Inverter</option>
@@ -189,7 +196,7 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-secondary mb-2">
                       Do you already have solar panels? *
                     </label>
                     <div className="flex space-x-6">
@@ -205,13 +212,14 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-secondary mb-2">
                       Additional Details
                     </label>
-                    <textarea name="message" value={formData.message} onChange={handleChange} rows={4} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Tell us more about your project..."></textarea>
+                    <textarea name="message" value={formData.message} onChange={handleChange} rows={4} className="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white hover:border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Tell us more about your project..."></textarea>
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full">
+                  <Button type="submit" size="lg" className="w-full bg-primary text-secondary font-semibold rounded-xl px-6 py-3 hover:bg-primary-dark transition-colors flex items-center justify-center gap-2">
+                    <SendIcon size={18} />
                     Send Request
                   </Button>
                 </form>
@@ -234,5 +242,58 @@ export function Contact() {
           </div>
         </Container>
       </section>
-    </main>;
+    </main>
+    {/* Success Modal */}
+    {isModalOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-md mx-4 rounded-2xl bg-white shadow-2xl"
+            onClick={e => e.stopPropagation()}
+          >
+            <div className="p-6">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="inline-flex w-10 h-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <CheckCircleIcon size={20} />
+                </div>
+                <h3 className="text-2xl font-bold text-secondary">Bericht verzonden</h3>
+              </div>
+              <p className="text-gray-700">
+                Bedankt! Uw bericht is succesvol verzonden. Een van onze medewerkers
+                neemt spoedig contact met u op.
+              </p>
+              <div className="mt-6 flex justify-end gap-3">
+                <button
+                  type="button"
+                  className="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50"
+                  onClick={() => setIsModalOpen(false)}
+                >
+                  Sluiten
+                </button>
+                <button
+                  type="button"
+                  className="px-4 py-2 rounded-lg bg-primary text-secondary font-semibold hover:bg-primary-dark"
+                  onClick={() => setIsModalOpen(false)}
+                >
+                  Oké, bedankt
+                </button>
+              </div>
+              <button
+                type="button"
+                aria-label="Close"
+                className="absolute top-3 right-3 text-gray-500 hover:text-secondary"
+                onClick={() => setIsModalOpen(false)}
+              >
+                <XIcon size={20} />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
 }
