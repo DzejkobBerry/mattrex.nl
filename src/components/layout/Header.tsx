@@ -14,9 +14,6 @@ export function Header() {
     name: 'Producten',
     path: '/producten'
   }, {
-    name: 'Projecten',
-    path: '/gallery'
-  }, {
     name: 'Contact',
     path: '/contact'
   }];

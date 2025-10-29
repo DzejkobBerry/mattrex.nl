@@ -41,9 +41,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/gallery" className="text-gray-300 hover:text-primary transition-colors hover:underline underline-offset-4">
-                  Projecten
-                </Link>
+                {/* Zakładka Projecten ukryta tymczasowo */}
               </li>
               <li>
                 <Link to="/contact" className="text-gray-300 hover:text-primary transition-colors hover:underline underline-offset-4">

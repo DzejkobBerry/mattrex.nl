@@ -5,7 +5,6 @@ import { Footer } from './components/layout/Footer';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Products } from './pages/Products';
-import { Gallery } from './pages/Gallery';
 import { Contact } from './pages/Contact';
 
 function ScrollToTop() {
@@ -24,7 +23,6 @@ export function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/producten" element={<Products />} />
-          <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
