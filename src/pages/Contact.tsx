@@ -30,10 +30,10 @@ export function Contact() {
     <>
     <main className="pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/10 to-secondary/10 py-20">
+      <section className="bg-gradient-to-br from-primary/10 to-secondary/10 py-12 md:py-20">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-secondary mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-6">
               Get in Touch
             </h1>
             <p className="text-xl text-gray-700 leading-relaxed">
@@ -45,9 +45,9 @@ export function Contact() {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-20 bg-gray-50">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
             {/* Contact Information */}
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-secondary mb-8">

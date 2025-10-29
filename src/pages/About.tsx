@@ -18,10 +18,10 @@ export function About() {
   }];
   return <main className="pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/10 to-secondary/10 py-20">
+      <section className="bg-gradient-to-br from-primary/10 to-secondary/10 py-12 md:py-20">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-secondary mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-6">
               About MATTREX
             </h1>
             <p className="text-xl text-gray-700 leading-relaxed">
@@ -33,7 +33,7 @@ export function About() {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -74,7 +74,7 @@ export function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-20 bg-gray-50">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="bg-gradient-to-br from-primary/5 to-white">
@@ -105,7 +105,7 @@ export function About() {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-secondary mb-4">

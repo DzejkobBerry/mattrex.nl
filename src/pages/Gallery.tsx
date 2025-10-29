@@ -69,7 +69,7 @@ export function Gallery() {
   const filteredProjects = filter === 'all' ? projects : projects.filter(p => p.category === filter);
   return <main className="pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/10 to-secondary/10 py-20">
+      <section className="bg-gradient-to-br from-primary/10 to-secondary/10 py-12 md:py-20">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-secondary mb-6">
@@ -95,7 +95,7 @@ export function Gallery() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-20 bg-gray-50">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map(project => <div key={project.id} onClick={() => setSelectedProject(project.id)} className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer group">
@@ -132,7 +132,7 @@ export function Gallery() {
               </button>
 
               {projects.find(p => p.id === selectedProject) && <>
-                  <img src={projects.find(p => p.id === selectedProject)!.image} alt={projects.find(p => p.id === selectedProject)!.title} className="w-full h-96 object-cover" />
+                  <img src={projects.find(p => p.id === selectedProject)!.image} alt={projects.find(p => p.id === selectedProject)!.title} className="w-full h-64 sm:h-80 md:h-96 object-cover" />
 
                   <div className="p-8 space-y-4">
                     <h2 className="text-3xl font-bold text-secondary">

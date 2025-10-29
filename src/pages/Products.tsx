@@ -127,7 +127,7 @@ export function Products() {
       </section>
 
       {/* Product Categories */}
-      {productCategories.map((category, catIndex) => <section key={catIndex} className={catIndex % 2 === 0 ? 'py-20 bg-white' : 'py-20 bg-gray-50'}>
+      {productCategories.map((category, catIndex) => <section key={catIndex} className={catIndex % 2 === 0 ? 'py-12 md:py-20 bg-white' : 'py-12 md:py-20 bg-gray-50'}>
           <Container>
             <div className="flex items-center justify-center mb-12">
               <div className="bg-primary/10 p-4 rounded-full mr-4">
@@ -138,7 +138,7 @@ export function Products() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {category.products.map((product, index) => (
                 <div
                   key={index}
@@ -209,7 +209,7 @@ export function Products() {
         </section>)}
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary to-secondary text-white">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-primary to-secondary text-white">
         <Container>
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-4xl font-bold">

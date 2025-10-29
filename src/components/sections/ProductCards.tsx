@@ -41,7 +41,7 @@ export function ProductCards() {
     badgeColor: 'bg-purple-600',
     image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop'
   }];
-  return <section id="special-offer" className="py-20 bg-gradient-to-br from-gray-50 via-white to-primary/5 scroll-mt-24">
+  return <section id="special-offer" className="py-12 md:py-20 bg-gradient-to-br from-gray-50 via-white to-primary/5 scroll-mt-24">
       <Container>
         <div className="text-center mb-16">
           <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full font-semibold text-sm mb-4">
@@ -56,7 +56,7 @@ export function ProductCards() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12">
           {products.map((product, index) => <div key={index} className="relative bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-primary">
               {/* Badge */}
               <div className={`absolute top-4 right-4 ${product.badgeColor} text-white px-4 py-2 rounded-full font-bold text-xs z-10 shadow-lg`}>

@@ -20,7 +20,7 @@ export function WhyChoose() {
     title: 'Professionele Installatie',
     description: 'Deskundige installatie en doorlopende ondersteuning door gecertificeerde technici.'
   }];
-  return <section className="relative py-20 overflow-hidden">
+  return <section className="relative py-12 md:py-20 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=1920&h=1080&fit=crop" alt="Wind turbines" className="w-full h-full object-cover" />
@@ -38,7 +38,7 @@ export function WhyChoose() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {features.map((feature, index) => <Card key={index} hover className="bg-white/80 backdrop-blur-sm">
               <div className="text-center space-y-4">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full">

@@ -41,7 +41,7 @@ export function Hero() {
     );
   };
 
-  return <section className="relative pt-32 pb-20 overflow-hidden min-h-[600px]">
+  return <section className="relative pt-24 md:pt-32 pb-12 md:pb-20 overflow-hidden min-h-[600px]">
       {/* Solar Farm Background Image */}
       <div className="absolute inset-0">
         <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1920&h=1080&fit=crop" alt="Solar farm" className="w-full h-full object-cover" />
@@ -60,7 +60,7 @@ export function Hero() {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
               Bespaar Energie.
               <br />
               <span className="text-primary">Sla de Toekomst Op.</span>
@@ -84,7 +84,7 @@ export function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                 <div className="text-3xl font-bold text-primary">500+</div>
                 <div className="text-sm text-gray-200">Installaties</div>
