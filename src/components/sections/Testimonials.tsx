@@ -39,6 +39,36 @@ export function Testimonials() {
     image: 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=100&h=100&fit=crop',
     rating: 5,
     text: 'Snelle installatie, duidelijke uitleg en uitstekende nazorg. Een aanrader voor iedereen.'
+  }, {
+    name: 'Eva van Leeuwen',
+    role: 'Projectmanager',
+    image: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=100&h=100&fit=crop',
+    rating: 5,
+    text: 'Heldere planning en oplevering op tijd. Energieopslag werkt zoals beloofd en bespaart elke maand.'
+  }, {
+    name: 'Ruben Smit',
+    role: 'Restaurant eigenaar',
+    image: 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=100&h=100&fit=crop',
+    rating: 5,
+    text: 'Geen zorgen meer bij stroomstoringen. Keuken blijft draaien en kosten zijn lager door slim verbruik.'
+  }, {
+    name: 'Lotte Verhoeven',
+    role: 'Huiseigenaar',
+    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop',
+    rating: 5,
+    text: 'Professioneel advies, nette montage. App voor monitoring is intuïtief en inzichtelijk.'
+  }, {
+    name: 'Daan de Boer',
+    role: 'Logistiek Manager',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop',
+    rating: 5,
+    text: 'Hybride systeem optimaliseert verbruik in magazijn. ROI ziet er uitstekend uit.'
+  }, {
+    name: 'Nina Jansen',
+    role: 'Consultant',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop',
+    rating: 5,
+    text: 'Transparante offerte, duidelijke communicatie en meetbare besparingen vanaf de eerste maand.'
   }];
   
   // Podziel opinie na slajdy po 3 karty
