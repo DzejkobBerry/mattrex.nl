@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container } from '../components/shared/Container';
 import { Card } from '../components/shared/Card';
 import { Button } from '../components/shared/Button';
@@ -15,6 +15,18 @@ export function Products() {
     setIsModalOpen(false);
     setDetailsProduct(null);
   };
+
+  // Zamykaj modal klawiszem Escape
+  useEffect(() => {
+    if (!isModalOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeDetails();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isModalOpen]);
 
   const productCategories = [
     {
@@ -284,22 +296,74 @@ export function Products() {
       {/* Details Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4" onClick={closeDetails}>
-          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl p-6" onClick={(e) => e.stopPropagation()}>
-            <h3 className="text-2xl font-bold text-secondary mb-2">{detailsProduct?.name}</h3>
-            {detailsProduct?.link && (
-              <p className="text-sm text-gray-600 mb-4">
-                Officiële specificaties — <a href={detailsProduct.link} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">bekijk bij Sluxer</a>
-              </p>
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-3xl p-0 overflow-hidden relative" onClick={(e) => e.stopPropagation()}>
+            {/* Always-visible close button */}
+            <button
+              aria-label="Sluiten"
+              onClick={closeDetails}
+              className="absolute top-3 right-3 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full w-9 h-9 flex items-center justify-center shadow"
+            >
+              ×
+            </button>
+            {/* Header */}
+            <div className="flex items-center justify-between px-6 py-4 border-b">
+              <h3 className="text-2xl font-bold text-secondary">{detailsProduct?.name}</h3>
+              <button aria-label="Sluiten" onClick={closeDetails} className="text-gray-500 hover:text-gray-700 text-xl leading-none">×</button>
+            </div>
+
+            {/* Image */}
+            {detailsProduct?.image && (
+              <div className="bg-gray-50 flex items-center justify-center px-6 pt-6">
+                <img src={detailsProduct.image} alt={detailsProduct?.name} className="h-40 md:h-52 object-contain" />
+              </div>
             )}
-            <ul className="space-y-2">
-              {(detailsProduct?.details ?? detailsProduct?.features ?? []).map((d: string, idx: number) => (
-                <li key={idx} className="flex items-start text-gray-700">
-                  <CheckCircleIcon size={18} className="text-primary mr-2 mt-0.5" />
-                  <span>{d}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-6 flex justify-end gap-3">
+
+            {/* Badges */}
+            <div className="px-6 pt-4 flex flex-wrap gap-2">
+              {detailsProduct?.popular && (
+                <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-semibold">Meest gekocht</span>
+              )}
+              {detailsProduct?.capacity && (
+                <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-xs font-semibold">Capaciteit: {detailsProduct.capacity}</span>
+              )}
+              {detailsProduct?.power && (
+                <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-xs font-semibold">Vermogen: {detailsProduct.power}</span>
+              )}
+              {detailsProduct?.warranty && (
+                <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-xs font-semibold">Garantie: {detailsProduct.warranty}</span>
+              )}
+            </div>
+
+            {/* Price */}
+            {detailsProduct?.price && (
+              <div className="px-6 pt-4">
+                <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl p-4">
+                  <div className="text-3xl font-bold text-primary">{detailsProduct.price}</div>
+                  <p className="text-xs text-gray-600 mt-1">Incl. btw</p>
+                </div>
+              </div>
+            )}
+
+            {/* Details grid */}
+            <div className="px-6 py-6">
+              <h4 className="text-lg font-semibold text-secondary mb-3">Specificaties</h4>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {(detailsProduct?.details ?? detailsProduct?.features ?? []).map((d: string, idx: number) => (
+                  <li key={idx} className="flex items-start text-gray-700">
+                    <CheckCircleIcon size={18} className="text-primary mr-2 mt-0.5" />
+                    <span>{d}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Actions */}
+            <div className="px-6 pb-6 flex justify-end gap-3">
+              {detailsProduct?.link && (
+                <a href={detailsProduct.link} target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline">Bekijk bij Sluxer</Button>
+                </a>
+              )}
               <Button variant="outline" onClick={closeDetails}>Sluiten</Button>
               <Link to="/contact">
                 <Button>Koop Nu</Button>
