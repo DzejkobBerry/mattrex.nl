@@ -111,7 +111,7 @@ export function Products() {
           price: '€0,00',
           features: ['Hybride', '4 MPPT (20 A)', 'EMS-modus', 'S-Miles Cloud monitoring'],
           image:
-            'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop',
+            'https://i.imgur.com/L28G8BI.png',
           link:
             'https://allegro.pl/oferta/inwerter-hoymiles-hit-10l-g3-trojfazowy-niskonapieciowy-falownik-10kw-17773467389?srsltid=AfmBOooyyu9fzjfCoXEKCatlTmdgVe0-6hRZZH6wJMheCUO3xM1FEQRb',
           details: [
@@ -132,7 +132,7 @@ export function Products() {
           price: '€0,00',
           features: ['Hybride', '4 MPPT (20 A)', 'EMS-modus', 'Parallel tot 10'],
           image:
-            'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop',
+            'https://i.imgur.com/HBRbYQS.png',
           link:
             'https://panele-sloneczne.com/product/hoymiles-falownik-hybrydowy-hit-20l-g3-3-fazowy-niskonapieciowy/',
           details: [
@@ -152,7 +152,7 @@ export function Products() {
           price: '€0,00',
           features: ['Hybride AC/DC', 'UPS functie', 'Smart load'],
           image:
-            'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop',
+            'https://i.imgur.com/bRFgxVj.png',
           link:
             'https://allegro.pl/oferta/falownik-hybrydowy-deye-sun-8k-sg05lp3-eu-sm2-3f-8kw-3f-nowa-wersja-17857775610?srsltid=AfmBOooB_8m2QRPQuSutZpieF2c2yQZqO08_-iNIpuImT8CDzo8TcaU-',
           details: [
