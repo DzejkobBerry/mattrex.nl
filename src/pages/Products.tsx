@@ -296,12 +296,12 @@ export function Products() {
       {/* Details Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4" onClick={closeDetails}>
-          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-3xl p-0 overflow-hidden relative" onClick={(e) => e.stopPropagation()}>
+          <div role="dialog" aria-modal="true" className="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[85vh] p-0 overflow-hidden relative" onClick={(e) => e.stopPropagation()}>
             {/* Always-visible close button */}
             <button
               aria-label="Sluiten"
               onClick={closeDetails}
-              className="absolute top-3 right-3 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full w-9 h-9 flex items-center justify-center shadow"
+              className="absolute top-3 right-3 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full w-9 h-9 flex items-center justify-center shadow z-10"
             >
               ×
             </button>
@@ -314,7 +314,7 @@ export function Products() {
             {/* Image */}
             {detailsProduct?.image && (
               <div className="bg-gray-50 flex items-center justify-center px-6 pt-6">
-                <img src={detailsProduct.image} alt={detailsProduct?.name} className="h-40 md:h-52 object-contain" />
+                <img src={detailsProduct.image} alt={detailsProduct?.name} className="h-32 md:h-40 object-contain" />
               </div>
             )}
 
@@ -345,7 +345,7 @@ export function Products() {
             )}
 
             {/* Details grid */}
-            <div className="px-6 py-6">
+            <div className="px-6 py-4 overflow-y-auto max-h-[50vh] pr-2">
               <h4 className="text-lg font-semibold text-secondary mb-3">Specificaties</h4>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {(detailsProduct?.details ?? detailsProduct?.features ?? []).map((d: string, idx: number) => (
@@ -364,7 +364,7 @@ export function Products() {
                   <Button variant="outline">Bekijk bij Sluxer</Button>
                 </a>
               )}
-              <Button variant="outline" onClick={closeDetails}>Sluiten</Button>
+              <Button variant="outline" onClick={closeDetails}>Verder winkelen</Button>
               <Link to="/contact">
                 <Button>Koop Nu</Button>
               </Link>
