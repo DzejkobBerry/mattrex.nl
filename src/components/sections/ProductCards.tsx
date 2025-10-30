@@ -4,43 +4,65 @@ import { Button } from '../shared/Button';
 import { Link } from 'react-router-dom';
 import { BatteryIcon, ZapIcon, BoxIcon, CheckCircleIcon, TrendingDownIcon, ShieldCheckIcon } from 'lucide-react';
 export function ProductCards() {
-  const products = [{
-    icon: BatteryIcon,
-    name: 'Thuisbatterij 10kWh',
-    tagline: 'Meest gekozen voor woningen',
-    originalPrice: '€8.500',
-    salePrice: '€7.500',
-    discount: 'BESPAAR €1.000',
-    capacity: '10 kWh',
-    features: ['Gratis installatieadvies', '10 jaar fabrieksgarantie', 'Smart app besturing', 'Uitbreidbaar tot 20kWh', 'Noodstroom functie'],
-    badge: 'POPULAIR',
-    badgeColor: 'bg-orange-500',
-    image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop'
-  }, {
-    icon: BoxIcon,
-    name: 'Zakelijke Batterij 50kWh',
-    tagline: 'Optimaal voor MKB bedrijven',
-    originalPrice: '€32.000',
-    salePrice: '€28.500',
-    discount: 'BESPAAR €3.500',
-    capacity: '50 kWh',
-    features: ['Gratis ROI analyse', '15 jaar garantie', 'Peak shaving functie', 'Remote monitoring', 'Subsidie ondersteuning'],
-    badge: 'BESTE DEAL',
-    badgeColor: 'bg-red-500',
-    image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&h=400&fit=crop'
-  }, {
-    icon: ZapIcon,
-    name: 'Industriële Batterij 200kWh',
-    tagline: 'Voor grootschalige toepassingen',
-    originalPrice: null,
-    salePrice: 'Op aanvraag',
-    discount: 'MAATWERK PRIJS',
-    capacity: '200 kWh',
-    features: ['Dedicated projectmanager', '20 jaar garantie', '24/7 monitoring', 'Preventief onderhoud', 'Volledige integratie'],
-    badge: 'PREMIUM',
-    badgeColor: 'bg-purple-600',
-    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop'
-  }];
+  const products = [
+    {
+      icon: BatteryIcon,
+      name: 'Sluxer Home 16 kWh',
+      tagline: 'Officiële Sluxer energieopslagmodule',
+      originalPrice: null,
+      salePrice: '€0,00',
+      discount: 'Introductiekorting',
+      capacity: '16 kWh',
+      features: [
+        '94% efficiëntie',
+        '≥ 8000 cycli',
+        'CAN / RS485 / Bluetooth',
+        'Max. vermogen 7.68 kW',
+        '10 jaar garantie'
+      ],
+      badge: 'Meest gekocht',
+      badgeColor: 'bg-orange-500',
+      image: 'https://i.imgur.com/SLuA5sC.png'
+    },
+    {
+      icon: BatteryIcon,
+      name: 'Sluxer Home 32 kWh',
+      tagline: 'Officiële Sluxer energieopslagmodule',
+      originalPrice: null,
+      salePrice: '€0,00',
+      discount: 'Introductiekorting',
+      capacity: '32 kWh',
+      features: [
+        '94% efficiëntie',
+        '≥ 8000 cycli',
+        'CAN / RS485 / Bluetooth',
+        'Max. vermogen 9.728 kW',
+        '10 jaar garantie'
+      ],
+      badge: 'Meest gekocht',
+      badgeColor: 'bg-orange-500',
+      image: 'https://i.imgur.com/s6sx6aX.png'
+    },
+    {
+      icon: ZapIcon,
+      name: 'DEYE SUN-10K-SG05LP3-EU Hybride Omvormer 10 kW',
+      tagline: '3-fase hybride omvormer',
+      originalPrice: null,
+      salePrice: 'Op aanvraag',
+      discount: 'MAATWERK PRIJS',
+      capacity: '10 kW',
+      features: [
+        'Hybride',
+        'UPS ondersteuning',
+        'Parallel mogelijk',
+        '3-fase',
+        '12 jaar garantie'
+      ],
+      badge: 'Meest gekocht',
+      badgeColor: 'bg-orange-500',
+      image: 'https://i.imgur.com/bRFgxVj.png'
+    }
+  ];
   return <section id="special-offer" className="py-12 md:py-20 bg-gradient-to-br from-gray-50 via-white to-primary/5 scroll-mt-24">
       <Container>
         <div className="text-center mb-16">
