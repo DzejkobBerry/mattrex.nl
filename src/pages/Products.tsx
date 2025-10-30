@@ -104,34 +104,99 @@ export function Products() {
       icon: ZapIcon,
       products: [
         {
-          name: 'Hybride Omvormer 5 kW',
-          capacity: '5 kW',
-          power: 'Enkelfasig',
-          warranty: '10 jaar',
+          name: 'Hoymiles HIT-10L-G3 Hybride Omvormer 10 kW',
+          capacity: '10 kW',
+          power: 'Driefasig (laagspanningsbatterij)',
+          warranty: '12 jaar',
           price: '€0,00',
-          features: ['AC/DC koppeling', 'MPPT', 'Noodstroom'],
+          features: ['Hybride', '4 MPPT (20 A)', 'EMS-modus', 'S-Miles Cloud monitoring'],
           image:
             'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop',
+          link:
+            'https://allegro.pl/oferta/inwerter-hoymiles-hit-10l-g3-trojfazowy-niskonapieciowy-falownik-10kw-17773467389?srsltid=AfmBOooyyu9fzjfCoXEKCatlTmdgVe0-6hRZZH6wJMheCUO3xM1FEQRb',
+          details: [
+            '3-fase hybride omvormer',
+            '4 MPPT met 20 A ingang',
+            'EMS: eigen verbruik, economisch, nood, peak shaving, tijdstarief',
+            'Parallel plaatsing tot 10 units',
+            'Ongebalanceerde fasebelasting mogelijk tot 50% per fase',
+            'S-Miles Cloud beheer en monitoring',
+            'Ondersteuning voor laagspanningsbatterijsystemen',
+          ],
         },
         {
-          name: 'Hybride Omvormer 10 kW',
+          name: 'Hoymiles HIT-20L-G3 Hybride Omvormer 20 kW',
+          capacity: '20 kW',
+          power: 'Driefasig (laagspanningsbatterij)',
+          warranty: '12 jaar',
+          price: '€0,00',
+          features: ['Hybride', '4 MPPT (20 A)', 'EMS-modus', 'Parallel tot 10'],
+          image:
+            'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop',
+          link:
+            'https://panele-sloneczne.com/product/hoymiles-falownik-hybrydowy-hit-20l-g3-3-fazowy-niskonapieciowy/',
+          details: [
+            '3-fase hybride omvormer',
+            '4 MPPT met 20 A ingang',
+            'EMS: peak shaving en tijdstarief',
+            'Parallel tot 10 omvormers',
+            'Ultralichte constructie voor eenvoudige installatie',
+            'Ingebouwde meter met bypass tot 50 A',
+          ],
+        },
+        {
+          name: 'DEYE SUN-8K-SG05LP3-EU Hybride Omvormer 8 kW',
+          capacity: '8 kW',
+          power: 'Driefasig',
+          warranty: '12 jaar',
+          price: '€0,00',
+          features: ['Hybride AC/DC', 'UPS functie', 'Smart load'],
+          image:
+            'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop',
+          link:
+            'https://allegro.pl/oferta/falownik-hybrydowy-deye-sun-8k-sg05lp3-eu-sm2-3f-8kw-3f-nowa-wersja-17857775610?srsltid=AfmBOooB_8m2QRPQuSutZpieF2c2yQZqO08_-iNIpuImT8CDzo8TcaU-',
+          details: [
+            'Model: SUN-8K-SG05LP3-EU',
+            '3-fase hybride omvormer',
+            'Ondersteuning voor noodstroom (UPS)',
+            'Hoge efficiëntie en stille werking',
+          ],
+        },
+        {
+          name: 'DEYE SUN-10K-SG05LP3-EU Hybride Omvormer 10 kW',
           capacity: '10 kW',
           power: 'Driefasig',
           warranty: '12 jaar',
           price: '€0,00',
-          features: ['Parallel', 'Smart grid', 'Hoge efficiëntie'],
+          features: ['Hybride', 'UPS', 'Parallel mogelijk'],
           image:
             'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop',
+          link:
+            'https://allegro.pl/oferta/falownik-hybrydowy-deye-10-kw-sun-10k-sg05lp3-eu-3fazowy-niskonapieciowy-15136856317?srsltid=AfmBOoq53mFWi3xfn2v7kp5owTI9FING0TSGumx0Og0kg01ALOYo0zxT',
+          details: [
+            'Model: SUN-10K-SG05LP3-EU',
+            '3-fase hybride omvormer',
+            'Noodstroomondersteuning (UPS)',
+            'Hoge efficiëntie en brede compatibiliteit',
+          ],
         },
         {
-          name: 'UPS/Omvormer 15 kW',
+          name: 'DEYE SUN-15K-SG05LP3-EU Hybride Omvormer 15 kW',
           capacity: '15 kW',
           power: 'Driefasig',
           warranty: '12 jaar',
           price: '€0,00',
-          features: ['UPS functie', 'Snelle omschakeling', 'Zakelijke integratie'],
+          features: ['Hybride', 'UPS', 'Smart load'],
           image:
             'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop',
+          link:
+            'https://allegro.pl/oferta/falownik-hybrydowy-inwerter-deye-sun-15k-sg05lp3-eu-sm2-15-kw-17265161801',
+          details: [
+            'Model: SUN-15K-SG05LP3-EU',
+            '3-fase hybride omvormer',
+            'Ondersteuning voor noodstroom (UPS)',
+            'Hoge prestaties en betrouwbaarheid',
+          ],
         },
       ],
     },
@@ -206,7 +271,11 @@ export function Products() {
               </h2>
             </div>
 
-            <div className={`grid grid-cols-1 md:grid-cols-2 ${category.category === 'Energieopslag (Diensten)' ? 'lg:grid-cols-2 justify-items-center lg:max-w-4xl mx-auto' : 'lg:grid-cols-3'} gap-6 md:gap-8`}>
+            <div className={`grid grid-cols-1 md:grid-cols-2 ${category.category === 'Energieopslag (Diensten)'
+              ? 'lg:grid-cols-2 justify-items-center lg:max-w-4xl mx-auto'
+              : category.category === 'Inverters (Diensten)'
+              ? 'lg:grid-cols-3 justify-items-center lg:max-w-6xl mx-auto [&>div:nth-child(4)]:lg:col-start-1 [&>div:nth-child(5)]:lg:col-start-3'
+              : 'lg:grid-cols-3'} gap-6 md:gap-8`}>
               {category.products.map((product, index) => (
                 <div
                   key={index}
@@ -217,9 +286,9 @@ export function Products() {
                     <img
                       src={product.image}
                       alt={product.name}
-                      className={`w-full h-full ${product.popular ? 'object-contain' : 'object-cover'} bg-transparent`}
+                      className={`w-full h-full ${(product.popular || category.category === 'Inverters (Diensten)') ? 'object-contain' : 'object-cover'} bg-transparent`}
                     />
-                    {!product.popular && (
+                    {!(product.popular || category.category === 'Inverters (Diensten)') && (
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     )}
 
@@ -231,7 +300,7 @@ export function Products() {
                     )}
 
                     {/* Capacity pill */}
-                    {!product.popular && (
+                    {!(product.popular || category.category === 'Inverters (Diensten)') && (
                       <div className="absolute bottom-4 left-4 flex items-center space-x-2">
                         <div className="bg-primary text-white px-3 py-1 rounded-full font-bold text-sm">
                           {product.capacity}
