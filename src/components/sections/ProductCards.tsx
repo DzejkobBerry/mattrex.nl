@@ -51,8 +51,9 @@ export function ProductCards() {
             Kies Uw Energieopslagsysteem
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Profiteer nu van onze introductiekorting en bespaar direct op uw
-            energierekening
+            Dit zijn onze 3 meest populaire oplossingen voor <strong>energieopslag</strong>.
+            Profiteer nu van onze introductiekorting – <strong>installatie gratis</strong>,
+            tijdelijke actie. Bespaar direct op uw energierekening.
           </p>
         </div>
 
@@ -100,7 +101,7 @@ export function ProductCards() {
                     {product.salePrice}
                   </div>
                   {product.originalPrice && <p className="text-xs text-gray-600 mt-1">
-                      Inclusief BTW, excl. installatie
+                      Inclusief BTW, <strong>installatie gratis</strong> — tijdelijke actie
                     </p>}
                 </div>
 
@@ -137,6 +138,9 @@ export function ProductCards() {
 
                 <p className="text-center text-xs text-gray-500">
                   Gratis offerte binnen 24 uur
+                </p>
+                <p className="text-center text-xs text-primary mt-1">
+                  Actie: <strong>installatie gratis</strong> — beperkte tijd
                 </p>
               </div>
             </div>)}
