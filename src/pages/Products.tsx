@@ -5,111 +5,116 @@ import { Button } from '../components/shared/Button';
 import { Link } from 'react-router-dom';
 import { BatteryIcon, ZapIcon, SunIcon, BoxIcon, HomeIcon, BuildingIcon, CheckCircleIcon } from 'lucide-react';
 export function Products() {
-  const productCategories = [{
-    category: 'Thuisbatterijen',
-    icon: HomeIcon,
-    products: [{
-      name: 'MATTREX Home 5kWh',
-      capacity: '5 kWh',
-      power: '2.5 kW',
-      warranty: '10 jaar',
-      price: 'Vanaf €4.500',
-      features: ['Compact ontwerp', 'Stille werking', 'App besturing', 'Uitbreidbaar'],
-      image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop'
-    }, {
-      name: 'MATTREX Home 10kWh',
-      capacity: '10 kWh',
-      power: '5 kW',
-      warranty: '10 jaar',
-      price: 'Vanaf €7.500',
-      features: ['Populairste keuze', 'Snelladen', 'Noodstroom functie', 'WiFi monitoring'],
-      image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop'
-    }, {
-      name: 'MATTREX Home 15kWh',
-      capacity: '15 kWh',
-      power: '7.5 kW',
-      warranty: '12 jaar',
-      price: 'Vanaf €10.500',
-      features: ['Maximale capaciteit', 'Driefasig', 'Premium garantie', 'Geavanceerde AI'],
-      image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop'
-    }]
-  }, {
-    category: 'Zakelijke Batterijen',
-    icon: BuildingIcon,
-    products: [{
-      name: 'MATTREX Business 30kWh',
-      capacity: '30 kWh',
-      power: '15 kW',
-      warranty: '15 jaar',
-      price: 'Op aanvraag',
-      features: ['MKB oplossing', 'Peak shaving', 'Laadpaal integratie', 'Remote monitoring'],
-      image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&h=400&fit=crop'
-    }, {
-      name: 'MATTREX Business 50kWh',
-      capacity: '50 kWh',
-      power: '25 kW',
-      warranty: '15 jaar',
-      price: 'Op aanvraag',
-      features: ['Energiemanagement', 'Grid services', 'Modulair systeem', 'Predictive analytics'],
-      image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&h=400&fit=crop'
-    }, {
-      name: 'MATTREX Business 100kWh',
-      capacity: '100 kWh',
-      power: '50 kW',
-      warranty: '20 jaar',
-      price: 'Op aanvraag',
-      features: ['Grootzakelijk', 'Volledige autonomie', 'Dedicated support', 'Custom integratie'],
-      image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&h=400&fit=crop'
-    }]
-  }, {
-    category: 'Industriële Systemen',
-    icon: BoxIcon,
-    products: [{
-      name: 'MATTREX Industrial 200kWh',
-      capacity: '200 kWh',
-      power: '100 kW',
-      warranty: '20 jaar',
-      price: 'Op aanvraag',
-      features: ['Zware industrie', 'Microgrid ready', '24/7 monitoring', 'Preventief onderhoud'],
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop'
-    }, {
-      name: 'MATTREX Industrial 500kWh',
-      capacity: '500 kWh',
-      power: '250 kW',
-      warranty: '25 jaar',
-      price: 'Op aanvraag',
-      features: ['Megaschaal', 'Grid stabilisatie', 'Frequentieregeling', 'Dedicated engineer'],
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop'
-    }]
-  }, {
-    category: 'Omvormers & Accessoires',
-    icon: ZapIcon,
-    products: [{
-      name: 'Hybride Omvormer 5kW',
-      capacity: '5 kW',
-      power: 'Enkelfasig',
-      warranty: '10 jaar',
-      price: 'Vanaf €1.800',
-      features: ['AC/DC koppeling', 'MPPT technologie', 'Noodstroom', 'Compacte maat'],
-      image: 'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop'
-    }, {
-      name: 'Hybride Omvormer 10kW',
-      capacity: '10 kW',
-      power: 'Driefasig',
-      warranty: '12 jaar',
-      price: 'Vanaf €3.200',
-      features: ['Driefasig', 'Parallel schakeling', 'Smart grid ready', 'Premium efficiëntie'],
-      image: 'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop'
-    }, {
-      name: 'EV Laadpaal 22kW',
-      capacity: '22 kW',
-      power: 'Slimme lading',
-      warranty: '5 jaar',
-      price: 'Vanaf €1.500',
-      features: ['Zonneoverschot laden', 'App besturing', 'RFID toegang', 'Dynamisch laden'],
-      image: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&h=400&fit=crop'
-    }]
-  }];
+  const productCategories = [
+    {
+      category: 'Energieopslag (Diensten)',
+      icon: BatteryIcon,
+      products: [
+        {
+          name: 'Thuisbatterij 16 kWh',
+          capacity: '16 kWh',
+          power: '3.6 kW',
+          warranty: '10 jaar',
+          price: 'Vanaf €6.900',
+          features: ['Uitbreidbaar', 'Noodstroom', 'App monitoring'],
+          image:
+            'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop',
+        },
+        {
+          name: 'Zakelijke opslag 64 kWh',
+          capacity: '64 kWh',
+          power: '30 kW',
+          warranty: '15 jaar',
+          price: 'Op aanvraag',
+          features: ['Peak shaving', 'Energiemanagement', 'Remote monitoring'],
+          image:
+            'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&h=400&fit=crop',
+        },
+        {
+          name: 'Industriële opslag 256 kWh',
+          capacity: '256 kWh',
+          power: '100 kW',
+          warranty: '20 jaar',
+          price: 'Op aanvraag',
+          features: ['Microgrid ready', '24/7 monitoring', 'Servicecontract'],
+          image:
+            'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop',
+        },
+      ],
+    },
+    {
+      category: 'Inverters (Diensten)',
+      icon: ZapIcon,
+      products: [
+        {
+          name: 'Hybride Omvormer 5 kW',
+          capacity: '5 kW',
+          power: 'Enkelfasig',
+          warranty: '10 jaar',
+          price: 'Vanaf €1.800',
+          features: ['AC/DC koppeling', 'MPPT', 'Noodstroom'],
+          image:
+            'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop',
+        },
+        {
+          name: 'Hybride Omvormer 10 kW',
+          capacity: '10 kW',
+          power: 'Driefasig',
+          warranty: '12 jaar',
+          price: 'Vanaf €3.200',
+          features: ['Parallel', 'Smart grid', 'Hoge efficiëntie'],
+          image:
+            'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop',
+        },
+        {
+          name: 'UPS/Omvormer 15 kW',
+          capacity: '15 kW',
+          power: 'Driefasig',
+          warranty: '12 jaar',
+          price: 'Op aanvraag',
+          features: ['UPS functie', 'Snelle omschakeling', 'Zakelijke integratie'],
+          image:
+            'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop',
+        },
+      ],
+    },
+    {
+      category: 'Accessoires & Installatie (Diensten)',
+      icon: BoxIcon,
+      products: [
+        {
+          name: 'Installatie & Oplevering',
+          capacity: 'Binnen NL',
+          power: '1–3 fase',
+          warranty: 'Werkgarantie',
+          price: 'Actie: installatie gratis',
+          features: ['Planning', 'Montage', 'Keuring'],
+          image:
+            'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop',
+        },
+        {
+          name: 'BMS & Monitoring',
+          capacity: 'Cloud/On-prem',
+          power: 'Realtime',
+          warranty: 'Supportcontract',
+          price: 'Vanaf €499',
+          features: ['App dashboard', 'Alarmen', 'Rapportage'],
+          image:
+            'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&h=400&fit=crop',
+        },
+        {
+          name: 'Onderhoud & Inspectie',
+          capacity: 'Periodiek',
+          power: 'Op locatie',
+          warranty: 'Service SLA',
+          price: 'Vanaf €299',
+          features: ['Veiligheidscheck', 'Firmware updates', 'Prestatie-audit'],
+          image:
+            'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop',
+        },
+      ],
+    },
+  ];
   return <main className="pt-20">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/10 to-secondary/10 py-20">
