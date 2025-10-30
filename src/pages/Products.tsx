@@ -205,12 +205,20 @@ export function Products() {
                       ))}
                     </ul>
 
-                    {/* CTA Button */}
-                    <Link to="/contact">
-                      <Button className="w-full text-lg py-4 shadow-lg hover:shadow-xl">
-                        Vraag Offerte Aan →
-                      </Button>
-                    </Link>
+                    {/* CTA Button usunięty na rzecz przycisków Details/Koop Nu */}
+                    {/* Extra Actions */}
+                    <div className="flex flex-wrap justify-center gap-4 mt-6">
+                      <Link to="/producten">
+                        <Button size="lg" variant="outline" className="px-8">
+                          Details
+                        </Button>
+                      </Link>
+                      <Link to="/contact">
+                        <Button size="lg" className="px-8">
+                          Koop Nu
+                        </Button>
+                      </Link>
+                    </div>
                     <p className="text-center text-xs text-gray-500">Gratis offerte binnen 24 uur</p>
                   </div>
                 </div>
