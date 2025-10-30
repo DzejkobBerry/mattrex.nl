@@ -1,44 +1,89 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container } from '../components/shared/Container';
 import { Card } from '../components/shared/Card';
 import { Button } from '../components/shared/Button';
 import { Link } from 'react-router-dom';
 import { BatteryIcon, ZapIcon, SunIcon, BoxIcon, HomeIcon, BuildingIcon, CheckCircleIcon } from 'lucide-react';
 export function Products() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [detailsProduct, setDetailsProduct] = useState<any | null>(null);
+  const openDetails = (product: any) => {
+    setDetailsProduct(product);
+    setIsModalOpen(true);
+  };
+  const closeDetails = () => {
+    setIsModalOpen(false);
+    setDetailsProduct(null);
+  };
+
   const productCategories = [
     {
       category: 'Energieopslag (Diensten)',
       icon: BatteryIcon,
       products: [
         {
-          name: 'Thuisbatterij 16 kWh',
+          name: 'Sluxer Home 16 kWh',
           capacity: '16 kWh',
-          power: '3.6 kW',
+          power: '7.68 kW max',
           warranty: '10 jaar',
-          price: 'Vanaf €6.900',
-          features: ['Uitbreidbaar', 'Noodstroom', 'App monitoring'],
+          price: '€0,00',
+          popular: true,
+          features: ['94% efficiëntie', '≥ 8000 cycli', 'CAN/RS485/Bluetooth'],
           image:
-            'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop',
+            'https://i.imgur.com/SLuA5sC.png',
+          link:
+            'https://www.sluxer.com/products/home-16-kwh?Monta%C5%BC=Brak+%2823%25+VAT%29',
+          details: [
+            'Capaciteit: 314Ah | 16 kWh',
+            'Configuratie: 1P16S',
+            'Efficiëntie: 94%',
+            'Nominale spanning: 51.2 V',
+            'Aanbevolen werkspanning: 48.0–54.4 V',
+            'Werkbereik (max): 42.0–58.4 V',
+            'Levensduur: ≥ 8000 cycli',
+            'Max. laadstroom: 150 A',
+            'Max. laadvermogen: 7.68 kW',
+            'Max. ontlaadstroom: 150 A',
+            'Max. ontlaadvermogen: 7.68 kW',
+            'Communicatie: CAN / RS485 / Bluetooth',
+            'Afmetingen (HxBxD): 817 × 412 × 267 mm',
+            'Gewicht: 113 kg',
+            'Producent: Sluxer Energy',
+            'Leveringstermijn: 10 werkdagen',
+            'Bedrijfstemperaturen: Laden 0–40°C, Ontladen −5–40°C',
+          ],
         },
         {
-          name: 'Zakelijke opslag 64 kWh',
-          capacity: '64 kWh',
-          power: '30 kW',
-          warranty: '15 jaar',
-          price: 'Op aanvraag',
-          features: ['Peak shaving', 'Energiemanagement', 'Remote monitoring'],
+          name: 'Sluxer Home 32 kWh',
+          capacity: '32.154 kWh',
+          power: '9.728 kW max',
+          warranty: '10 jaar',
+          price: '€0,00',
+          popular: true,
+          features: ['94% efficiëntie', '≥ 8000 cycli', 'CAN/RS485/Bluetooth'],
           image:
-            'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&h=400&fit=crop',
-        },
-        {
-          name: 'Industriële opslag 256 kWh',
-          capacity: '256 kWh',
-          power: '100 kW',
-          warranty: '20 jaar',
-          price: 'Op aanvraag',
-          features: ['Microgrid ready', '24/7 monitoring', 'Servicecontract'],
-          image:
-            'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop',
+            'https://i.imgur.com/s6sx6aX.png',
+          link:
+            'https://www.sluxer.com/products/home-32-kwh?Monta%C5%BC=Brak+%2823%25+VAT%29',
+          details: [
+            'Capaciteit: 628Ah | 32.154 kWh',
+            'Configuratie: 2P16S',
+            'Efficiëntie: 94%',
+            'Nominale spanning: 51.2 V',
+            'Aanbevolen werkspanning: 48.0–54.4 V',
+            'Werkbereik (max): 42.0–58.4 V',
+            'Levensduur: ≥ 8000 cycli',
+            'Max. laadstroom: 190 A',
+            'Max. laadvermogen: 9.728 kW',
+            'Max. ontlaadstroom: 190 A',
+            'Max. ontlaadvermogen: 9.728 kW',
+            'Communicatie: CAN / RS485 / Bluetooth',
+            'Afmetingen (HxBxD): 829 × 800 × 280 mm',
+            'Gewicht: 210 kg',
+            'Producent: Sluxer Energy',
+            'Leveringstermijn: 10 werkdagen',
+            'Bedrijfstemperaturen: Laden 0–40°C, Ontladen −5–40°C',
+          ],
         },
       ],
     },
@@ -51,7 +96,7 @@ export function Products() {
           capacity: '5 kW',
           power: 'Enkelfasig',
           warranty: '10 jaar',
-          price: 'Vanaf €1.800',
+          price: '€0,00',
           features: ['AC/DC koppeling', 'MPPT', 'Noodstroom'],
           image:
             'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop',
@@ -61,7 +106,7 @@ export function Products() {
           capacity: '10 kW',
           power: 'Driefasig',
           warranty: '12 jaar',
-          price: 'Vanaf €3.200',
+          price: '€0,00',
           features: ['Parallel', 'Smart grid', 'Hoge efficiëntie'],
           image:
             'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop',
@@ -71,7 +116,7 @@ export function Products() {
           capacity: '15 kW',
           power: 'Driefasig',
           warranty: '12 jaar',
-          price: 'Op aanvraag',
+          price: '€0,00',
           features: ['UPS functie', 'Snelle omschakeling', 'Zakelijke integratie'],
           image:
             'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop',
@@ -87,7 +132,7 @@ export function Products() {
           capacity: 'Binnen NL',
           power: '1–3 fase',
           warranty: 'Werkgarantie',
-          price: 'Actie: installatie gratis',
+          price: '€0,00',
           features: ['Planning', 'Montage', 'Keuring'],
           image:
             'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop',
@@ -97,7 +142,7 @@ export function Products() {
           capacity: 'Cloud/On-prem',
           power: 'Realtime',
           warranty: 'Supportcontract',
-          price: 'Vanaf €499',
+          price: '0.00 Euro',
           features: ['App dashboard', 'Alarmen', 'Rapportage'],
           image:
             'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&h=400&fit=crop',
@@ -107,7 +152,7 @@ export function Products() {
           capacity: 'Periodiek',
           power: 'Op locatie',
           warranty: 'Service SLA',
-          price: 'Vanaf €299',
+          price: '0.00 Euro',
           features: ['Veiligheidscheck', 'Firmware updates', 'Prestatie-audit'],
           image:
             'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop',
@@ -149,7 +194,7 @@ export function Products() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div className={`grid grid-cols-1 md:grid-cols-2 ${category.category === 'Energieopslag (Diensten)' ? 'lg:grid-cols-2 justify-items-center lg:max-w-4xl mx-auto' : 'lg:grid-cols-3'} gap-6 md:gap-8`}>
               {category.products.map((product, index) => (
                 <div
                   key={index}
@@ -160,16 +205,27 @@ export function Products() {
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full ${product.popular ? 'object-contain' : 'object-cover'} bg-transparent`}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    {!product.popular && (
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    )}
+
+                    {/* Popular badge */}
+                    {product.popular && (
+                      <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full font-semibold text-xs shadow-md">
+                        Meest gekocht
+                      </div>
+                    )}
 
                     {/* Capacity pill */}
-                    <div className="absolute bottom-4 left-4 flex items-center space-x-2">
-                      <div className="bg-primary text-white px-3 py-1 rounded-full font-bold text-sm">
-                        {product.capacity}
+                    {!product.popular && (
+                      <div className="absolute bottom-4 left-4 flex items-center space-x-2">
+                        <div className="bg-primary text-white px-3 py-1 rounded-full font-bold text-sm">
+                          {product.capacity}
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
 
                   {/* Content */}
@@ -208,11 +264,9 @@ export function Products() {
                     {/* CTA Button usunięty na rzecz przycisków Details/Koop Nu */}
                     {/* Extra Actions */}
                     <div className="flex flex-wrap justify-center gap-4 mt-6">
-                      <Link to="/producten">
-                        <Button size="lg" variant="outline" className="px-8">
-                          Details
-                        </Button>
-                      </Link>
+                      <Button size="lg" variant="outline" className="px-8" onClick={() => openDetails(product)}>
+                        Details
+                      </Button>
                       <Link to="/contact">
                         <Button size="lg" className="px-8">
                           Koop Nu
@@ -225,7 +279,35 @@ export function Products() {
               ))}
             </div>
           </Container>
-        </section>)}
+      </section>)}
+
+      {/* Details Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4" onClick={closeDetails}>
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl p-6" onClick={(e) => e.stopPropagation()}>
+            <h3 className="text-2xl font-bold text-secondary mb-2">{detailsProduct?.name}</h3>
+            {detailsProduct?.link && (
+              <p className="text-sm text-gray-600 mb-4">
+                Officiële specificaties — <a href={detailsProduct.link} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">bekijk bij Sluxer</a>
+              </p>
+            )}
+            <ul className="space-y-2">
+              {(detailsProduct?.details ?? detailsProduct?.features ?? []).map((d: string, idx: number) => (
+                <li key={idx} className="flex items-start text-gray-700">
+                  <CheckCircleIcon size={18} className="text-primary mr-2 mt-0.5" />
+                  <span>{d}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6 flex justify-end gap-3">
+              <Button variant="outline" onClick={closeDetails}>Sluiten</Button>
+              <Link to="/contact">
+                <Button>Koop Nu</Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* CTA Section */}
       <section className="py-12 md:py-20 bg-gradient-to-br from-primary to-secondary text-white">
