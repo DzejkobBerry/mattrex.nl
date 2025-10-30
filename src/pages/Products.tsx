@@ -205,34 +205,38 @@ export function Products() {
       icon: BoxIcon,
       products: [
         {
-          name: 'Installatie & Oplevering',
-          capacity: 'Binnen NL',
-          power: '1–3 fase',
+          name: 'Kabelset 50 mm² (accu-verbinding M8)',
+          capacity: '50 mm²',
+          power: '—',
           warranty: 'Werkgarantie',
           price: '€0,00',
-          features: ['Planning', 'Montage', 'Keuring'],
+          features: ['Doorsnede 50 mm²', 'M8 eindhuls', 'Flexibele kabel'],
           image:
-            'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop',
+            'https://i.imgur.com/fqygAJE.png',
+          link:
+            'https://allegro.pl/oferta/przewod-kabel-linka-50mm2-zestaw-do-laczenia-akumulatorow-m8-2x150cm-2x1-5m-17828507695?context=29e15a33b4475cc1652b795687aa50cdc503e6506b895d61c799a44fee47bee1467aa922c1967382385023aa18283a03f80fbf11ba7348592310a563130eee0e8f38c044e092ce6e69f03bddd05d488e29cd5b376e028a793d9926ac79e48f9ce5333eb96db596152ca3eaad29f23fdc20240bc2b78d361f091015e19ac23f4e63be85e0b15aa699bc9146b07f38165e&sellerHasChanged=false&fromVariant=17828501871',
+          details: [
+            'Zestaw: 2×150 cm + 2×1,5 m',
+            'Zastosowanie: łączenie akumulatorów',
+            'Końcówki: M8',
+            'Materiał: miedź, linka',
+          ],
         },
         {
-          name: 'BMS & Monitoring',
-          capacity: 'Cloud/On-prem',
-          power: 'Realtime',
-          warranty: 'Supportcontract',
-          price: '0.00 Euro',
-          features: ['App dashboard', 'Alarmen', 'Rapportage'],
+          name: 'Kabelset 70 mm² (accu-verbinding M8)',
+          capacity: '70 mm²',
+          power: '—',
+          warranty: 'Werkgarantie',
+          price: '€0,00',
+          features: ['Doorsnede 70 mm²', 'M8 eindhuls', 'Flexibele kabel'],
           image:
-            'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&h=400&fit=crop',
-        },
-        {
-          name: 'Onderhoud & Inspectie',
-          capacity: 'Periodiek',
-          power: 'Op locatie',
-          warranty: 'Service SLA',
-          price: '0.00 Euro',
-          features: ['Veiligheidscheck', 'Firmware updates', 'Prestatie-audit'],
-          image:
-            'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop',
+            'https://i.imgur.com/fqygAJE.png',
+          details: [
+            'Zestaw: 2×150 cm + 2×1,5 m',
+            'Zastosowanie: łączenie akumulatorów',
+            'Końcówki: M8',
+            'Materiał: miedź, linka',
+          ],
         },
       ],
     },
@@ -275,6 +279,8 @@ export function Products() {
               ? 'lg:grid-cols-2 justify-items-center lg:max-w-4xl mx-auto'
               : category.category === 'Inverters (Diensten)'
               ? 'lg:grid-cols-3 justify-items-center lg:max-w-6xl mx-auto [&>div:nth-child(4)]:lg:col-start-1 [&>div:nth-child(5)]:lg:col-start-3'
+              : category.category === 'Accessoires & Installatie (Diensten)'
+              ? 'lg:grid-cols-2 justify-items-center lg:max-w-4xl mx-auto'
               : 'lg:grid-cols-3'} gap-6 md:gap-8`}>
               {category.products.map((product, index) => (
                 <div
