@@ -386,7 +386,7 @@ export function Products() {
       {/* Details Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4" onClick={closeDetails}>
-          <div role="dialog" aria-modal="true" className="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[85vh] p-0 overflow-hidden relative" onClick={(e) => e.stopPropagation()}>
+          <div role="dialog" aria-modal="true" className="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[85vh] p-0 overflow-hidden relative flex flex-col" onClick={(e) => e.stopPropagation()}>
             {/* Always-visible close button */}
             <button
               aria-label="Sluiten"
@@ -435,7 +435,7 @@ export function Products() {
             )}
 
             {/* Details grid */}
-            <div className="px-6 py-4 overflow-y-auto max-h-[50vh] pr-2">
+            <div className="flex-1 px-6 py-4 overflow-y-auto pr-2">
               <h4 className="text-lg font-semibold text-secondary mb-3">Specificaties</h4>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {(detailsProduct?.details ?? detailsProduct?.features ?? []).map((d: string, idx: number) => (
@@ -448,13 +448,7 @@ export function Products() {
             </div>
 
             {/* Actions */}
-            <div className="px-6 pb-6 flex justify-end gap-3">
-              {detailsProduct?.link && (
-                <a href={detailsProduct.link} target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline">Bekijk bij Sluxer</Button>
-                </a>
-              )}
-              <Button variant="outline" onClick={closeDetails}>Verder winkelen</Button>
+            <div className="px-6 pb-6 flex justify-end">
               <Link to="/contact">
                 <Button>Koop Nu</Button>
               </Link>
