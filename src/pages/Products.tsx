@@ -358,6 +358,27 @@ export function Products() {
                   </div>
                 </div>
               ))}
+              {category.category === 'Inverters (Diensten)' && (
+                <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-dashed border-primary/30 p-8 lg:col-start-2 lg:row-start-2">
+                  {/* Badge */}
+                  <span className="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-semibold">Binnenkort</span>
+                  {/* Soft background */}
+                  <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-secondary/5 to-primary/5"></div>
+                  {/* Content */}
+                  <div className="relative flex flex-col items-center text-center space-y-3">
+                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                      <ZapIcon size={28} className="text-primary animate-pulse" />
+                    </div>
+                    <h3 className="text-secondary font-bold text-xl">Binnenkort nieuw product</h3>
+                    <p className="text-gray-600 text-sm">Blijf op de hoogte — we werken aan ons aanbod.</p>
+                    <div className="pt-2">
+                      <Link to="/contact">
+                        <Button variant="outline" size="sm">Houd mij op de hoogte</Button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </Container>
       </section>)}
