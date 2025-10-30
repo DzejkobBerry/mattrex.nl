@@ -109,6 +109,7 @@ export function Products() {
           power: 'Driefasig (laagspanningsbatterij)',
           warranty: '12 jaar',
           price: '€0,00',
+          popular: true,
           features: ['Hybride', '4 MPPT (20 A)', 'EMS-modus', 'S-Miles Cloud monitoring'],
           image:
             'https://i.imgur.com/L28G8BI.png',
@@ -130,6 +131,7 @@ export function Products() {
           power: 'Driefasig (laagspanningsbatterij)',
           warranty: '12 jaar',
           price: '€0,00',
+          popular: true,
           features: ['Hybride', '4 MPPT (20 A)', 'EMS-modus', 'Parallel tot 10'],
           image:
             'https://i.imgur.com/HBRbYQS.png',
@@ -150,6 +152,7 @@ export function Products() {
           power: 'Driefasig',
           warranty: '12 jaar',
           price: '€0,00',
+          popular: true,
           features: ['Hybride AC/DC', 'UPS functie', 'Smart load'],
           image:
             'https://i.imgur.com/bRFgxVj.png',
@@ -168,6 +171,7 @@ export function Products() {
           power: 'Driefasig',
           warranty: '12 jaar',
           price: '€0,00',
+          popular: true,
           features: ['Hybride', 'UPS', 'Parallel mogelijk'],
           image:
             'https://i.imgur.com/bRFgxVj.png',
@@ -186,6 +190,7 @@ export function Products() {
           power: 'Driefasig',
           warranty: '12 jaar',
           price: '€0,00',
+          popular: true,
           features: ['Hybride', 'UPS', 'Smart load'],
           image:
             'https://i.imgur.com/8K16zWv.png',
@@ -210,6 +215,7 @@ export function Products() {
           power: '—',
           warranty: 'Werkgarantie',
           price: '€0,00',
+          popular: true,
           features: ['Doorsnede 50 mm²', 'M8 eindhuls', 'Flexibele kabel'],
           image:
             'https://i.imgur.com/fqygAJE.png',
@@ -228,6 +234,7 @@ export function Products() {
           power: '—',
           warranty: 'Werkgarantie',
           price: '€0,00',
+          popular: true,
           features: ['Doorsnede 70 mm²', 'M8 eindhuls', 'Flexibele kabel'],
           image:
             'https://i.imgur.com/fqygAJE.png',
