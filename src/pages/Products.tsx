@@ -170,7 +170,7 @@ export function Products() {
           price: '€0,00',
           features: ['Hybride', 'UPS', 'Parallel mogelijk'],
           image:
-            'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop',
+            'https://i.imgur.com/bRFgxVj.png',
           link:
             'https://allegro.pl/oferta/falownik-hybrydowy-deye-10-kw-sun-10k-sg05lp3-eu-3fazowy-niskonapieciowy-15136856317?srsltid=AfmBOoq53mFWi3xfn2v7kp5owTI9FING0TSGumx0Og0kg01ALOYo0zxT',
           details: [
@@ -188,7 +188,7 @@ export function Products() {
           price: '€0,00',
           features: ['Hybride', 'UPS', 'Smart load'],
           image:
-            'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop',
+            'https://i.imgur.com/8K16zWv.png',
           link:
             'https://allegro.pl/oferta/falownik-hybrydowy-inwerter-deye-sun-15k-sg05lp3-eu-sm2-15-kw-17265161801',
           details: [
