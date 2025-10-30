@@ -222,10 +222,10 @@ export function Products() {
           link:
             'https://allegro.pl/oferta/przewod-kabel-linka-50mm2-zestaw-do-laczenia-akumulatorow-m8-2x150cm-2x1-5m-17828507695?context=29e15a33b4475cc1652b795687aa50cdc503e6506b895d61c799a44fee47bee1467aa922c1967382385023aa18283a03f80fbf11ba7348592310a563130eee0e8f38c044e092ce6e69f03bddd05d488e29cd5b376e028a793d9926ac79e48f9ce5333eb96db596152ca3eaad29f23fdc20240bc2b78d361f091015e19ac23f4e63be85e0b15aa699bc9146b07f38165e&sellerHasChanged=false&fromVariant=17828501871',
           details: [
-            'Zestaw: 2×150 cm + 2×1,5 m',
-            'Zastosowanie: łączenie akumulatorów',
-            'Końcówki: M8',
-            'Materiał: miedź, linka',
+            'Set: 2×150 cm + 2×1,5 m',
+            'Toepassing: verbinden van accu’s',
+            'Eindhuls: M8',
+            'Materiaal: koper, flexibele kabel',
           ],
         },
         {
@@ -239,10 +239,10 @@ export function Products() {
           image:
             'https://i.imgur.com/fqygAJE.png',
           details: [
-            'Zestaw: 2×150 cm + 2×1,5 m',
-            'Zastosowanie: łączenie akumulatorów',
-            'Końcówki: M8',
-            'Materiał: miedź, linka',
+            'Set: 2×150 cm + 2×1,5 m',
+            'Toepassing: verbinden van accu’s',
+            'Eindhuls: M8',
+            'Materiaal: koper, flexibele kabel',
           ],
         },
       ],
