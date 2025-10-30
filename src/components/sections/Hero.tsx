@@ -110,7 +110,7 @@ export function Hero() {
               onMouseLeave={onMouseLeave}
             >
               <img
-                src="https://i.imgur.com/0rbiIMO.png"
+                src="https://i.imgur.com/6Ql9tcU.png"
                 alt="Energieopslag module 3D"
                 className="w-full h-auto max-h-[400px] object-contain drop-shadow-2xl transform-gpu transition-transform duration-300 ease-out hover:scale-[1.03]"
                 style={{ transform: tiltTransform, willChange: 'transform' }}
