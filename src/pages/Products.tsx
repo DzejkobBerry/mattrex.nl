@@ -285,7 +285,7 @@ export function Products() {
                         </Button>
                       </Link>
                     </div>
-                    <p className="text-center text-xs text-gray-500">Gratis offerte binnen 24 uur</p>
+                    <p className="text-center text-xs text-gray-500">Levering + installatie-informatie binnen 7–14 werkdagen</p>
                   </div>
                 </div>
               ))}
