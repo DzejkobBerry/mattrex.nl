@@ -119,8 +119,14 @@ export function Products() {
               Onze Producten
             </h1>
             <p className="text-xl text-gray-700 leading-relaxed">
-              Ontdek ons complete assortiment energieopslagsystemen, omvormers
-              en accessoires. Van thuisbatterijen tot industriële oplossingen.
+              <strong>MATTREX.nl</strong> is officieel en geautoriseerd distributeur van
+              <strong>Sluxer</strong> in Nederland. Oplossingen voor <strong>energieopslag</strong>
+              van <strong>16–512 kWh</strong>, <strong>inverters</strong> en accessoires — met
+              volledige configuratie en technisch support.
+            </p>
+            <p className="mt-2 text-base text-gray-600">
+              We installeren geen zonnepanelen; we focussen op batterijen,
+              inverters en technisch toebehoren.
             </p>
           </div>
         </Container>

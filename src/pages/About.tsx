@@ -5,16 +5,16 @@ import { TargetIcon, EyeIcon, AwardIcon } from 'lucide-react';
 export function About() {
   const values = [{
     icon: TargetIcon,
-    title: 'Technology',
-    description: 'We leverage cutting-edge innovations to deliver the most advanced energy solutions.'
+    title: 'Technologie',
+    description: 'We zetten geavanceerde innovaties in om de meest moderne energieoplossingen te leveren.'
   }, {
     icon: EyeIcon,
-    title: 'Ecology',
-    description: 'Sustainability is at our core. Every solution we provide helps reduce environmental impact.'
+    title: 'Ecologie',
+    description: 'Duurzaamheid staat centraal. Elke oplossing helpt de ecologische voetafdruk te verlagen.'
   }, {
     icon: AwardIcon,
-    title: 'Trust',
-    description: 'We build lasting relationships through transparency, quality, and exceptional service.'
+    title: 'Vertrouwen',
+    description: 'We bouwen langdurige relaties op basis van transparantie, kwaliteit en uitstekende service.'
   }];
   return <main className="pt-20">
       {/* Hero Section */}
@@ -22,11 +22,12 @@ export function About() {
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-6">
-              About MATTREX
+              Over MATTREX.nl
             </h1>
             <p className="text-xl text-gray-700 leading-relaxed">
-              Leading the energy revolution with innovative storage solutions
-              and a commitment to a sustainable future.
+              Officieel en geautoriseerd distributeur van <strong>Sluxer</strong> in Nederland.
+              Gespecialiseerd in <strong>energieopslag</strong>, <strong>inverters</strong> en technisch toebehoren
+              voor bedrijven en particulieren.
             </p>
           </div>
         </Container>
@@ -38,26 +39,26 @@ export function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-secondary mb-6">
-                Our Story
+                Ons Verhaal
               </h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  Founded in 2008, MATTREX began with a simple mission: make
-                  renewable energy accessible and practical for everyone. What
-                  started as a small team of passionate engineers has grown into
-                  the Netherlands' leading provider of energy storage solutions.
+                  <strong>MATTREX.nl</strong> is officieel en geautoriseerd distributeur van
+                  <strong>Sluxer</strong>. We richten ons op distributie, installatie en advies
+                  voor systemen voor <strong>energieopslag</strong>, <strong>inverters</strong> en
+                  technisch toebehoren voor zowel zakelijke klanten als particulieren.
                 </p>
                 <p>
-                  Over 15 years, we've installed more than 500 systems across
-                  homes, businesses, and industrial facilities. Our expertise
-                  spans battery storage, solar inverters, and complete renewable
-                  energy systems.
+                  We beschikken over <strong>meer dan 10 jaar ervaring</strong> in Europa en zijn
+                  sinds <strong>januari 2025</strong> actief in Nederland. We leveren oplossingen
+                  met een opslagcapaciteit van <strong>16 kWh tot 512 kWh</strong>, inclusief
+                  volledige technische ondersteuning, configuratie en professioneel advies.
                 </p>
                 <p>
-                  Today, we continue to innovate, partnering with leading
-                  manufacturers to bring the latest technology to our clients
-                  while maintaining our commitment to exceptional service and
-                  sustainability.
+                  We installeren <strong>geen zonnepanelen</strong>; onze focus ligt uitsluitend op
+                  batterijsystemen, <strong>inverters</strong> en accessoires. We bedienen klanten
+                  in <strong>heel Nederland</strong> met betrouwbaar energiemanagement en
+                  <strong>professioneel advies</strong>.
                 </p>
               </div>
             </div>
@@ -65,8 +66,8 @@ export function About() {
             <div className="relative">
               <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&h=600&fit=crop" alt="MATTREX team" className="rounded-2xl shadow-2xl" />
               <div className="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-xl shadow-lg">
-                <div className="text-4xl font-bold">15+</div>
-                <div className="text-sm">Years of Excellence</div>
+                <div className="text-4xl font-bold">10+</div>
+                <div className="text-sm">Jaar Ervaring</div>
               </div>
             </div>
           </div>
@@ -79,25 +80,65 @@ export function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="bg-gradient-to-br from-primary/5 to-white">
               <h3 className="text-2xl font-bold text-secondary mb-4">
-                Our Mission
+                Onze Missie
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                To empower individuals and businesses with sustainable energy
-                solutions that reduce costs, increase energy independence, and
-                contribute to a cleaner planet. We make renewable energy simple,
-                reliable, and accessible.
+                Particulieren en bedrijven versterken met duurzame
+                <strong>energieopslag</strong> en intelligente <strong>inverter</strong>-oplossingen.
+                Verlaag <strong>energiekosten</strong>, vergroot energie-onafhankelijkheid i.v.m.
+                <strong>energiekostenbeheer</strong> (energimangement) i zapewnij stabilność.
+                Zapewniamy <strong>professioneel advies</strong>, konfigurację i wsparcie techniczne.
               </p>
             </Card>
 
             <Card className="bg-gradient-to-br from-secondary/5 to-white">
               <h3 className="text-2xl font-bold text-secondary mb-4">
-                Our Vision
+                Onze Visie
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                A future where every home and business is powered by clean,
-                renewable energy. We envision a world where energy storage is as
-                common as solar panels, creating resilient, sustainable
-                communities across the Netherlands and beyond.
+                Een toekomst waarin elk huis en elke onderneming draait op
+                slimme <strong>energieopslag</strong> i <strong>inverter</strong>-technologie. Met
+                oplossingen <strong>Sluxer</strong> <strong>in Nederland</strong> budujemy odporne,
+                duurzame społeczności z profesjonalnym <strong>energimangement</strong>.
+              </p>
+            </Card>
+          </div>
+        </Container>
+      </section>
+
+      {/* Waarom Sluxer */}
+      <section className="py-12 md:py-20 bg-white">
+        <Container>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-secondary mb-4">
+              Waarom Sluxer
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Officiële en geautoriseerde distributie van <strong>Sluxer</strong> —
+              betrouwbare <strong>energieopslag</strong>, inteligent <strong>energimangement</strong> i
+              kompatybilne <strong>inverters</strong> dla domu i biznesu w całym <strong>Nederland</strong>.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card hover className="bg-gradient-to-br from-primary/5 to-white">
+              <h3 className="text-2xl font-semibold text-secondary mb-3">Schaalbaar 16–512 kWh</h3>
+              <p className="text-gray-700">
+                Modularne baterijen — od domu po przemysł. Rozszerzalna
+                pojemność, wysokie bezpieczeństwo i zgodność z systemami.
+              </p>
+            </Card>
+            <Card hover className="bg-gradient-to-br from-secondary/5 to-white">
+              <h3 className="text-2xl font-semibold text-secondary mb-3">Veiligheid i BMS</h3>
+              <p className="text-gray-700">
+                Zaawansowany Battery Management System, monitoring w czasie
+                rzeczywistym i ochrona przed przeciążeniem.
+              </p>
+            </Card>
+            <Card hover className="bg-gradient-to-br from-primary/5 to-white">
+              <h3 className="text-2xl font-semibold text-secondary mb-3">Professioneel advies</h3>
+              <p className="text-gray-700">
+                Pełna konfiguracja, dobór <strong>inverter</strong>, wsparcie techniczne i
+                doradztwo — redukcja kosztów i stabilna praca systemu.
               </p>
             </Card>
           </div>
@@ -109,10 +150,10 @@ export function About() {
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-secondary mb-4">
-              Our Values
+              Onze Waarden
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Three principles guide everything we do.
+              Drie principes sturen alles wat we doen.
             </p>
           </div>
 
@@ -137,22 +178,23 @@ export function About() {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-secondary mb-6">
-              Technology That Powers Sustainability
+              Technologie die Duurzaamheid Aanstuurt
             </h2>
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              We partner with world-leading manufacturers to deliver
-              cutting-edge energy storage systems. Our solutions feature
-              advanced battery management, real-time monitoring, and intelligent
-              optimization algorithms that maximize efficiency and lifespan.
+              We werken samen met toonaangevende fabrikanten zoals
+              <strong>Sluxer</strong> om geavanceerde <strong>energieopslag</strong> te leveren.
+              Onze oplossingen bieden intelligent batterijbeheer, realtime
+              monitoring en slimme optimalisatie voor maximale efficiëntie en
+              levensduur.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
               <div className="bg-white rounded-lg shadow-md p-6">
                 <div className="text-3xl font-bold text-primary mb-2">99%</div>
-                <div className="text-sm text-gray-600">Efficiency</div>
+                <div className="text-sm text-gray-600">Efficiëntie</div>
               </div>
               <div className="bg-white rounded-lg shadow-md p-6">
                 <div className="text-3xl font-bold text-primary mb-2">10+</div>
-                <div className="text-sm text-gray-600">Year Warranty</div>
+                <div className="text-sm text-gray-600">Jaar Garantie</div>
               </div>
               <div className="bg-white rounded-lg shadow-md p-6">
                 <div className="text-3xl font-bold text-primary mb-2">24/7</div>

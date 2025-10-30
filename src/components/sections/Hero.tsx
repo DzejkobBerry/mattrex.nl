@@ -67,9 +67,9 @@ export function Hero() {
             </h1>
 
             <p className="text-xl text-gray-100 leading-relaxed">
-              Innovatieve energieopslagsystemen voor woningen en bedrijven.
-              Benut de kracht van hernieuwbare energie met onze geavanceerde
-              batterijsystemen en omvormers.
+              Officieel en geautoriseerd distributeur van <strong>Sluxer</strong> in Nederland.
+              Geavanceerde <strong>energieopslag</strong> (16–512 kWh), <strong>inverters</strong> en
+              professioneel advies voor woningen en bedrijven.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -90,7 +90,7 @@ export function Hero() {
                 <div className="text-sm text-gray-200">Installaties</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-3xl font-bold text-primary">15+</div>
+                <div className="text-3xl font-bold text-primary">10+</div>
                 <div className="text-sm text-gray-200">Jaar Ervaring</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
@@ -139,7 +139,7 @@ export function Hero() {
                   style={{ transitionDelay: '300ms' }}
                 >
                   <div className="bg-white/85 backdrop-blur-sm text-secondary px-5 py-2.5 text-base font-medium rounded-full shadow-lg border border-white/60">
-                    Gratis installatieadvies
+                    Capaciteit 16–512 kWh
                   </div>
                 </div>
               </div>

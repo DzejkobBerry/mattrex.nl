@@ -60,8 +60,8 @@ export function Contact() {
                     <PhoneIcon size={24} className="text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-secondary mb-1">Phone</h3>
-                    <p className="text-gray-600">+31 (0) 20 123 4567</p>
+                    <h3 className="font-semibold text-secondary mb-1">Telefoon</h3>
+                    <p className="text-gray-600">+31 626976934</p>
                   </div>
                 </div>
               </Card>
@@ -72,7 +72,7 @@ export function Contact() {
                     <MailIcon size={24} className="text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-secondary mb-1">Email</h3>
+                    <h3 className="font-semibold text-secondary mb-1">E-mailadres</h3>
                     <p className="text-gray-600">info@mattrex.nl</p>
                   </div>
                 </div>
@@ -85,14 +85,14 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-secondary mb-1">
-                      Address
+                      Adres
                     </h3>
                     <p className="text-gray-600">
                       Energieweg 123
                       <br />
                       1000 AB Amsterdam
                       <br />
-                      Netherlands
+                      Nederland
                     </p>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-secondary mb-1">
-                      Business Hours
+                      Openingstijden
                     </h3>
                     <p className="text-gray-600">
                       Mon - Fri: 8:00 - 18:00
@@ -127,25 +127,25 @@ export function Contact() {
                   <div className="inline-flex w-10 h-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                     <MailIcon size={20} />
                   </div>
-                  <h2 className="text-3xl font-bold text-secondary">Request a Quote</h2>
+                  <h2 className="text-3xl font-bold text-secondary">Vraag een Offerte Aan</h2>
                 </div>
                 <p className="text-gray-600 mb-8">
-                  Fill out the form below and our team will get back to you
-                  within 24 hours with a customized quote.
+                  Vul het onderstaande formulier in. Ons team neemt binnen 24 uur
+                  contact met u op met een gepersonaliseerde offerte.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-secondary mb-2">
-                        Full Name *
+                        Volledige naam *
                       </label>
                       <input type="text" name="fullName" required value={formData.fullName} onChange={handleChange} className="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white hover:border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="John Doe" />
                     </div>
 
                     <div>
                       <label className="block text-sm font-medium text-secondary mb-2">
-                        Email Address *
+                        E-mailadres *
                       </label>
                       <input type="email" name="email" required value={formData.email} onChange={handleChange} className="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white hover:border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="john@example.com" />
                     </div>
@@ -154,14 +154,14 @@ export function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-secondary mb-2">
-                        Phone Number *
+                        Telefoonnummer *
                       </label>
                       <input type="tel" name="phone" required value={formData.phone} onChange={handleChange} className="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white hover:border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="+31 6 12345678" />
                     </div>
 
                     <div>
                       <label className="block text-sm font-medium text-secondary mb-2">
-                        Installation Address *
+                        Installatieadres *
                       </label>
                       <input type="text" name="address" required value={formData.address} onChange={handleChange} className="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white hover:border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Street, City" />
                     </div>
@@ -170,46 +170,49 @@ export function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-secondary mb-2">
-                        Type of Building *
+                        Type gebouw *
                       </label>
                       <select name="buildingType" required value={formData.buildingType} onChange={handleChange} className="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                        <option value="">Select type</option>
-                        <option value="house">House</option>
-                        <option value="business">Business</option>
-                        <option value="farm">Farm</option>
-                        <option value="industrial">Industrial Facility</option>
+                        <option value="">Selecteer type</option>
+                        <option value="house">Woning</option>
+                        <option value="business">Zakelijk</option>
+                        <option value="farm">Boerderij</option>
+                        <option value="industrial">Industrieel</option>
                       </select>
                     </div>
 
                     <div>
                       <label className="block text-sm font-medium text-secondary mb-2">
-                        What are you interested in? *
+                        Waar bent u in geïnteresseerd? *
                       </label>
                       <select name="interest" required value={formData.interest} onChange={handleChange} className="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                        <option value="">Select option</option>
-                        <option value="battery">Battery Storage</option>
+                        <option value="">Selecteer optie</option>
+                        <option value="battery">Energieopslag (batterij)</option>
                         <option value="inverter">Inverter</option>
-                        <option value="solar">Solar Panels</option>
-                        <option value="full">Full System</option>
+                        <option value="full">Volledig systeem</option>
                       </select>
                     </div>
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-secondary mb-2">
-                      Do you already have solar panels? *
+                      Heeft u al zonnepanelen? *
                     </label>
                     <div className="flex space-x-6">
                       <label className="flex items-center">
                         <input type="radio" name="hasSolar" value="yes" required checked={formData.hasSolar === 'yes'} onChange={handleChange} className="mr-2 text-primary focus:ring-primary" />
-                        <span className="text-gray-700">Yes</span>
+                        <span className="text-gray-700">Ja</span>
                       </label>
                       <label className="flex items-center">
                         <input type="radio" name="hasSolar" value="no" required checked={formData.hasSolar === 'no'} onChange={handleChange} className="mr-2 text-primary focus:ring-primary" />
-                        <span className="text-gray-700">No</span>
+                        <span className="text-gray-700">Nee</span>
                       </label>
                     </div>
                   </div>
+                  <p className="text-sm text-gray-600">
+                    Let op: wij installeren geen zonnepanelen. Wij leveren en configureren
+                    <strong>energieopslag</strong>, <strong>inverters</strong> en technisch toebehoren.
+                  </p>
 
                   <div>
                     <label className="block text-sm font-medium text-secondary mb-2">
