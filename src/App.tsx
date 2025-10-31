@@ -6,6 +6,12 @@ import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Products } from './pages/Products';
 import { Contact } from './pages/Contact';
+function MailRedirect() {
+  useEffect(() => {
+    window.location.href = 'https://www.ovhcloud.com/fr/mail';
+  }, []);
+  return null;
+}
 
 function ScrollToTop() {
   const location = useLocation();
@@ -24,6 +30,8 @@ export function App() {
           <Route path="/about" element={<About />} />
           <Route path="/producten" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
+          {/* External redirect to OVH Webmail */}
+          <Route path="/poczta" element={<MailRedirect />} />
         </Routes>
         <Footer />
       </div>
