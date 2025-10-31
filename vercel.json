@@ -8,7 +8,7 @@
   "redirects": [
     {
       "source": "/poczta",
-      "destination": "https://www.ovhcloud.com/fr/mail",
+      "destination": "https://www.ovhcloud.com/pl/mail",
       "permanent": false
     }
   ]
