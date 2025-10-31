@@ -40,6 +40,7 @@ export function Products() {
           warranty: '10 jaar',
           price: '€0,00',
           popular: true,
+          badgeText: 'Gratis installatie',
           features: ['94% efficiëntie', '≥ 8000 cycli', 'CAN/RS485/Bluetooth'],
           image:
             'https://i.imgur.com/SLuA5sC.png',
@@ -308,7 +309,7 @@ export function Products() {
                     {/* Popular badge */}
                     {product.popular && (
                       <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full font-semibold text-xs shadow-md">
-                        Meest gekocht
+                        {product.badgeText ?? 'Meest gekocht'}
                       </div>
                     )}
 
@@ -424,7 +425,7 @@ export function Products() {
             {/* Badges */}
             <div className="px-6 pt-4 flex flex-wrap gap-2">
               {detailsProduct?.popular && (
-                <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-semibold">Meest gekocht</span>
+                <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-semibold">{detailsProduct?.badgeText ?? 'Meest gekocht'}</span>
               )}
               {detailsProduct?.capacity && (
                 <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-xs font-semibold">Capaciteit: {detailsProduct.capacity}</span>
