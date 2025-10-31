@@ -1,0 +1,15 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/poczta",
+      "destination": "https://www.ovhcloud.com/fr/mail",
+      "permanent": false
+    }
+  ]
+}
