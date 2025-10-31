@@ -20,8 +20,8 @@ export function ProductCards() {
         'Max. vermogen 7.68 kW',
         '10 jaar garantie'
       ],
-      badge: 'Meest gekocht',
-      badgeColor: 'bg-orange-500',
+      badge: 'Gratis installatie',
+      badgeColor: 'bg-primary',
       image: 'https://i.imgur.com/SLuA5sC.png'
     },
     {
@@ -41,6 +41,8 @@ export function ProductCards() {
       ],
       badge: 'Meest gekocht',
       badgeColor: 'bg-orange-500',
+      extraBadge: 'Gratis installatie',
+      extraBadgeColor: 'bg-primary',
       image: 'https://i.imgur.com/s6sx6aX.png'
     },
     {
@@ -81,9 +83,16 @@ export function ProductCards() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12">
           {products.map((product, index) => <div key={index} className="relative bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-primary">
-              {/* Badge */}
-              <div className={`absolute top-4 right-4 ${product.badgeColor} text-white px-4 py-2 rounded-full font-bold text-xs z-10 shadow-lg`}>
-                {product.badge}
+              {/* Badges */}
+              <div className="absolute top-4 right-4 z-10 flex flex-col items-end gap-2">
+                <div className={`${product.badgeColor} text-white px-4 py-2 rounded-full font-bold text-xs shadow-lg`}>
+                  {product.badge}
+                </div>
+                {product.extraBadge && (
+                  <div className={`${product.extraBadgeColor ?? product.badgeColor} text-white px-4 py-2 rounded-full font-bold text-xs shadow-lg`}>
+                    {product.extraBadge}
+                  </div>
+                )}
               </div>
 
               {/* Image */}
