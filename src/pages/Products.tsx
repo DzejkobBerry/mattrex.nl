@@ -73,6 +73,7 @@ export function Products() {
           warranty: '10 jaar',
           price: '€0,00',
           popular: true,
+          extraBadge: 'Gratis installatie',
           features: ['94% efficiëntie', '≥ 8000 cycli', 'CAN/RS485/Bluetooth'],
           image:
             'https://i.imgur.com/s6sx6aX.png',
@@ -308,8 +309,15 @@ export function Products() {
 
                     {/* Popular badge */}
                     {product.popular && (
-                      <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full font-semibold text-xs shadow-md">
-                        {product.badgeText ?? 'Meest gekocht'}
+                      <div className="absolute top-4 right-4 z-10 flex flex-col items-end gap-2">
+                        <div className="bg-primary text-white px-3 py-1 rounded-full font-semibold text-xs shadow-md">
+                          {product.badgeText ?? 'Meest gekocht'}
+                        </div>
+                        {product.extraBadge && (
+                          <div className="bg-primary text-white px-3 py-1 rounded-full font-semibold text-xs shadow-md">
+                            {product.extraBadge}
+                          </div>
+                        )}
                       </div>
                     )}
 
@@ -426,6 +434,9 @@ export function Products() {
             <div className="px-6 pt-4 flex flex-wrap gap-2">
               {detailsProduct?.popular && (
                 <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-semibold">{detailsProduct?.badgeText ?? 'Meest gekocht'}</span>
+              )}
+              {detailsProduct?.popular && detailsProduct?.extraBadge && (
+                <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-semibold">{detailsProduct.extraBadge}</span>
               )}
               {detailsProduct?.capacity && (
                 <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-xs font-semibold">Capaciteit: {detailsProduct.capacity}</span>
