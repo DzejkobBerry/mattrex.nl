@@ -85,9 +85,9 @@ export function About() {
               <p className="text-gray-700 leading-relaxed">
                 Particulieren en bedrijven versterken met duurzame
                 <strong>energieopslag</strong> en intelligente <strong>inverter</strong>-oplossingen.
-                Verlaag <strong>energiekosten</strong>, vergroot energie-onafhankelijkheid i.v.m.
-                <strong>energiekostenbeheer</strong> (energimangement) i zapewnij stabilność.
-                Zapewniamy <strong>professioneel advies</strong>, konfigurację i wsparcie techniczne.
+                Verlaag <strong>energiekosten</strong>, vergroot energie-onafhankelijkheid en
+                verbeter het <strong>energiemanagement</strong>. Wij bieden
+                <strong>professioneel advies</strong>, configuratie en technische ondersteuning.
               </p>
             </Card>
 
@@ -97,9 +97,9 @@ export function About() {
               </h3>
               <p className="text-gray-700 leading-relaxed">
                 Een toekomst waarin elk huis en elke onderneming draait op
-                slimme <strong>energieopslag</strong> i <strong>inverter</strong>-technologie. Met
-                oplossingen <strong>Sluxer</strong> <strong>in Nederland</strong> budujemy odporne,
-                duurzame społeczności z profesjonalnym <strong>energimangement</strong>.
+                slimme <strong>energieopslag</strong> en <strong>inverter</strong>-technologie. Met
+                <strong>Sluxer</strong>-oplossingen in <strong>Nederland</strong> bouwen we veerkrachtige,
+                duurzame gemeenschappen met professioneel <strong>energiemanagement</strong>.
               </p>
             </Card>
           </div>
@@ -115,30 +115,30 @@ export function About() {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Officiële en geautoriseerde distributie van <strong>Sluxer</strong> —
-              betrouwbare <strong>energieopslag</strong>, inteligent <strong>energimangement</strong> i
-              kompatybilne <strong>inverters</strong> dla domu i biznesu w całym <strong>Nederland</strong>.
+              betrouwbare <strong>energieopslag</strong>, intelligent <strong>energiemanagement</strong> en
+              compatibele <strong>inverters</strong> voor thuis en bedrijf in heel <strong>Nederland</strong>.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card hover className="bg-gradient-to-br from-primary/5 to-white">
               <h3 className="text-2xl font-semibold text-secondary mb-3">Schaalbaar 16–512 kWh</h3>
               <p className="text-gray-700">
-                Modularne baterijen — od domu po przemysł. Rozszerzalna
-                pojemność, wysokie bezpieczeństwo i zgodność z systemami.
+                Modulaire batterijen — van woning tot industrie. Uitbreidbare
+                capaciteit, hoge veiligheid en compatibiliteit met systemen.
               </p>
             </Card>
             <Card hover className="bg-gradient-to-br from-secondary/5 to-white">
-              <h3 className="text-2xl font-semibold text-secondary mb-3">Veiligheid i BMS</h3>
+              <h3 className="text-2xl font-semibold text-secondary mb-3">Veiligheid en BMS</h3>
               <p className="text-gray-700">
-                Zaawansowany Battery Management System, monitoring w czasie
-                rzeczywistym i ochrona przed przeciążeniem.
+                Geavanceerd Battery Management System, realtime monitoring en
+                bescherming tegen overbelasting.
               </p>
             </Card>
             <Card hover className="bg-gradient-to-br from-primary/5 to-white">
               <h3 className="text-2xl font-semibold text-secondary mb-3">Professioneel advies</h3>
               <p className="text-gray-700">
-                Pełna konfiguracja, dobór <strong>inverter</strong>, wsparcie techniczne i
-                doradztwo — redukcja kosztów i stabilna praca systemu.
+                Volledige configuratie, keuze van <strong>inverter</strong>, technische ondersteuning
+                en advies — lagere kosten en stabiele systeemwerking.
               </p>
             </Card>
           </div>
