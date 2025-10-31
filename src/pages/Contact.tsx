@@ -85,14 +85,14 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-secondary mb-1">
-                      Adres
+                      Werkgebied
                     </h3>
                     <p className="text-gray-600">
-                      Energieweg 123
+                      Wij werken in heel Nederland
                       <br />
-                      1000 AB Amsterdam
+                      <span className="text-primary font-medium">Landelijke service en installatie</span>
                       <br />
-                      Nederland
+                      Van Amsterdam tot Maastricht
                     </p>
                   </div>
                 </div>
@@ -108,11 +108,9 @@ export function Contact() {
                       Openingstijden
                     </h3>
                     <p className="text-gray-600">
-                      Mon - Fri: 8:00 - 18:00
+                      Maandag - Vrijdag: 10:00 - 14:00
                       <br />
-                      Sat: 9:00 - 14:00
-                      <br />
-                      Sun: Closed
+                      Zaterdag - Zondag: Gesloten
                     </p>
                   </div>
                 </div>
