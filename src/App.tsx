@@ -8,7 +8,7 @@ import { Products } from './pages/Products';
 import { Contact } from './pages/Contact';
 function MailRedirect() {
   useEffect(() => {
-    window.location.href = 'https://www.ovhcloud.com/pl/mail';
+    window.location.href = 'https://zimbra1.mail.ovh.net';
   }, []);
   return null;
 }
