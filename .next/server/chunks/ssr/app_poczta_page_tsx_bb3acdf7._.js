@@ -1,0 +1,3 @@
+module.exports=[53226,a=>{"use strict";var b=a.i(87924),c=a.i(72131);function d(){return(0,c.useEffect)(()=>{window.location.href="https://zimbra1.mail.ovh.net"},[]),(0,b.jsx)("div",{className:"flex items-center justify-center min-h-screen bg-gray-50",children:(0,b.jsxs)("div",{className:"text-center",children:[(0,b.jsx)("div",{className:"animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"}),(0,b.jsx)("p",{className:"text-gray-600",children:"Redirecting to webmail..."})]})})}a.s(["default",()=>d])}];
+
+//# sourceMappingURL=app_poczta_page_tsx_bb3acdf7._.js.map

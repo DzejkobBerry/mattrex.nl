@@ -1,25 +1,26 @@
-import React from 'react';
 import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
+import type { MouseEvent } from 'react';
 import { Button } from '../shared/Button';
 import { Container } from '../shared/Container';
 import { ZapIcon } from 'lucide-react';
 export function Hero() {
   const BASE_ROTATE_Y = -12;
   const BASE_ROTATE_X = 6;
-  const [tiltTransform, setTiltTransform] = React.useState(
+  const [tiltTransform, setTiltTransform] = useState(
     `rotateY(${BASE_ROTATE_Y}deg) rotateX(${BASE_ROTATE_X}deg) translateZ(40px)`
   );
-  const tiltRef = React.useRef<HTMLDivElement | null>(null);
-  const rafRef = React.useRef<number | null>(null);
+  const tiltRef = useRef<HTMLDivElement | null>(null);
+  const rafRef = useRef<number | null>(null);
 
   // Visibility state for sequential chip animations
-  const [chipsVisible, setChipsVisible] = React.useState(false);
-  React.useEffect(() => {
+  const [chipsVisible, setChipsVisible] = useState(false);
+  useEffect(() => {
     const t = setTimeout(() => setChipsVisible(true), 100);
     return () => clearTimeout(t);
   }, []);
 
-  const onMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  const onMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     const el = tiltRef.current;
     if (!el) return;
     const rect = el.getBoundingClientRect();

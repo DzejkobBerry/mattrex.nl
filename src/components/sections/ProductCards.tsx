@@ -1,10 +1,25 @@
-import React from 'react';
 import { Container } from '../shared/Container';
 import { Button } from '../shared/Button';
 import Link from 'next/link';
-import { BatteryIcon, ZapIcon, BoxIcon, CheckCircleIcon, TrendingDownIcon, ShieldCheckIcon } from 'lucide-react';
+import { BatteryIcon, ZapIcon, CheckCircleIcon, TrendingDownIcon, ShieldCheckIcon } from 'lucide-react';
+import type { ElementType } from 'react';
 export function ProductCards() {
-  const products = [
+  type ProductItem = {
+    icon: ElementType;
+    name: string;
+    tagline: string;
+    originalPrice: string | null;
+    salePrice: string;
+    discount: string;
+    capacity: string;
+    features: string[];
+    badge: string;
+    badgeColor: string;
+    image: string;
+    extraBadge?: string;
+    extraBadgeColor?: string;
+  };
+  const products: ProductItem[] = [
     {
       icon: BatteryIcon,
       name: 'Sluxer Home 16 kWh',

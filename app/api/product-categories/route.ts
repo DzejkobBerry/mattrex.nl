@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import { BatteryIcon, ZapIcon, BoxIcon } from 'lucide-react';
 
 export async function GET() {
   const productCategories = [

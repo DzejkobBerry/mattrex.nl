@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Container } from '../shared/Container';
 import { Card } from '../shared/Card';
 import { StarIcon, QuoteIcon } from 'lucide-react';

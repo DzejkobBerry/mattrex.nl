@@ -1,0 +1,10 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/api/product-categories/route": "/api/product-categories",
+  "/contact/page": "/contact",
+  "/page": "/",
+  "/poczta/page": "/poczta",
+  "/producten/page": "/producten"
+}

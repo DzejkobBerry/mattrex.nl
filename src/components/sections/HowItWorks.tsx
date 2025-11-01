@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container } from '../shared/Container';
 import { PhoneIcon, PencilRulerIcon, WrenchIcon, ShieldCheckIcon } from 'lucide-react';
 export function HowItWorks() {

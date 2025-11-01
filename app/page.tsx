@@ -3,7 +3,6 @@ import React from 'react';
 import { Hero } from '../src/components/sections/Hero';
 import { ProductCards } from '../src/components/sections/ProductCards';
 import { WhyChoose } from '../src/components/sections/WhyChoose';
-import { Products as ProductsSection } from '../src/components/sections/Products';
 import { HowItWorks } from '../src/components/sections/HowItWorks';
 import { Testimonials } from '../src/components/sections/Testimonials';
 

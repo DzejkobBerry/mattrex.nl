@@ -1,11 +1,10 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Container } from '@/components/shared/Container';
-import { Card } from '@/components/shared/Card';
 import { Button } from '@/components/shared/Button';
-import { BatteryIcon, ZapIcon, SunIcon, BoxIcon, HomeIcon, BuildingIcon, CheckCircleIcon } from 'lucide-react';
+import { BatteryIcon, ZapIcon, BoxIcon, CheckCircleIcon } from 'lucide-react';
 
 export default function ProductenPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -310,11 +309,11 @@ export default function ProductenPage() {
                     {product.popular && category.category === 'Energieopslag (Diensten)' && (
                       <div className="absolute top-4 right-4 z-10 flex flex-col items-end gap-2">
                         <div className="bg-primary text-white px-3 py-1 rounded-full font-semibold text-xs shadow-md">
-                          {product.badgeText ?? 'Meest gekocht'}
+                          {'badgeText' in product ? (product as any).badgeText ?? 'Meest gekocht' : 'Meest gekocht'}
                         </div>
-                        {product.extraBadge && (
+                        {'extraBadge' in product && (
                           <div className="bg-primary text-white px-3 py-1 rounded-full font-semibold text-xs shadow-md">
-                            {product.extraBadge}
+                            {(product as any).extraBadge}
                           </div>
                         )}
                       </div>
