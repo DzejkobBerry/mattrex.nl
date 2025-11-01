@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container } from '../../src/components/shared/Container';
 import { Card } from '../../src/components/shared/Card';
 import { TargetIcon, EyeIcon, AwardIcon } from 'lucide-react';
