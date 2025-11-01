@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from '../shared/Container';
 import { Card } from '../shared/Card';
 import { Button } from '../shared/Button';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { BatteryIcon, ZapIcon, SunIcon } from 'lucide-react';
 export function Products() {
   const products = [{
@@ -57,7 +57,7 @@ export function Products() {
                     </li>)}
                 </ul>
 
-                <Link to="/contact">
+                <Link href="/contact">
                   <Button variant="outline" className="w-full">
                     Learn More
                   </Button>

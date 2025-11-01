@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { MenuIcon, XIcon } from 'lucide-react';
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
   const navItems = [{
     name: 'Home',
     path: '/'
@@ -17,12 +18,12 @@ export function Header() {
     name: 'Contact',
     path: '/contact'
   }];
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => pathname === path;
   return <header className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">M</span>
             </div>
@@ -31,10 +32,10 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map(item => <Link key={item.path} to={item.path} className={`text-base font-medium transition-colors ${isActive(item.path) ? 'text-primary' : 'text-gray-700 hover:text-primary'}`}>
+            {navItems.map(item => <Link key={item.path} href={item.path} className={`text-base font-medium transition-colors ${isActive(item.path) ? 'text-primary' : 'text-gray-700 hover:text-primary'}`}>
                 {item.name}
               </Link>)}
-            <Link to="/#special-offer">
+            <Link href="/#special-offer">
               <button className="bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-primary-dark transition-colors">
                 Vraag Offerte Aan
               </button>
@@ -49,10 +50,10 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && <div className="md:hidden py-4 space-y-4">
-            {navItems.map(item => <Link key={item.path} to={item.path} className={`block text-base font-medium transition-colors ${isActive(item.path) ? 'text-primary' : 'text-gray-700 hover:text-primary'}`} onClick={() => setMobileMenuOpen(false)}>
+            {navItems.map(item => <Link key={item.path} href={item.path} className={`block text-base font-medium transition-colors ${isActive(item.path) ? 'text-primary' : 'text-gray-700 hover:text-primary'}`} onClick={() => setMobileMenuOpen(false)}>
                 {item.name}
               </Link>)}
-            <Link to="/#special-offer" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/#special-offer" onClick={() => setMobileMenuOpen(false)}>
               <button className="w-full bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-primary-dark transition-colors">
                 Vraag Offerte Aan
               </button>

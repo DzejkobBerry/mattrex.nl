@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from '../shared/Container';
 import { Button } from '../shared/Button';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { BatteryIcon, ZapIcon, BoxIcon, CheckCircleIcon, TrendingDownIcon, ShieldCheckIcon } from 'lucide-react';
 export function ProductCards() {
   const products = [
@@ -161,7 +161,7 @@ export function ProductCards() {
                 </div>
 
                 {/* CTA Button */}
-                <Link to="/contact">
+                <Link href="/contact">
                   <Button className="w-full text-lg py-4 shadow-lg hover:shadow-xl">
                     Bestel Nu →
                   </Button>
@@ -183,7 +183,7 @@ export function ProductCards() {
           <p className="mb-6 text-white/90">
             Bekijk ons complete assortiment met nog meer keuzes
           </p>
-          <Link to="/producten">
+          <Link href="/producten">
             <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-gray-100 border-white px-12">
               Bekijk Alle Producten
             </Button>

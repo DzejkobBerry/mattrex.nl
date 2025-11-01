@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Button } from '../shared/Button';
 import { Container } from '../shared/Container';
 import { ZapIcon } from 'lucide-react';
@@ -73,10 +73,10 @@ export function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contact">
+              <Link href="/contact">
                 <Button size="lg">Vraag Offerte Aan</Button>
               </Link>
-              <Link to="/about">
+              <Link href="/about">
                 <Button variant="outline" size="lg" className="bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white hover:text-secondary">
                   Meer Informatie
                 </Button>
